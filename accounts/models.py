@@ -24,6 +24,7 @@ ACCOUNT_TYPE_CHOICES = (
     ('current', 'Current'),
     ('fixed', 'Fixed Deposit'),
     ('offshore', 'Off Shore'),
+    ('escrow', 'Escrow'),
 )
 
 
