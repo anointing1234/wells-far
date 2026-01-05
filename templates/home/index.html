@@ -1,0 +1,1297 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <!-- SEO Optimized Title & Description -->
+    <title>Wells Fargo Investment Bank | Global Investment & Financial Services</title>
+    <meta name="description" content="Wells Fargo Investment Bank delivers world-class investment banking, capital markets, advisory, and financial solutions. We support corporations, institutions, and governments with trusted expertise, strategic insight, and long-term financial value." />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Wells Fargo Investment Bank | Investment & Financial Solutions" />
+    <meta property="og:description" content="Comprehensive investment banking, advisory, and capital markets services backed by trusted financial expertise." />
+    <meta property="og:image" content="{% static 'assets/images/your-og-image.jpg' %}" />
+    <meta property="og:type" content="website" />
+
+
+    <!-- Favicons -->
+   <link rel="icon" href="{% static "assets/images/favicons/favicon.ico" %}" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/animate/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jquery-ui/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jarallax/jarallax.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/nouislider/nouislider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/nouislider/nouislider.pips.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/tiny-slider/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/easilon-icons/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel/css/owl.theme.default.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/slick/slick.css' %}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/easilon.css' %}" />
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+
+    <div class="page-wrapper">
+        <div class="topbar">
+            <div class="container-fluid">
+                <div class="topbar__inner">
+                    <ul class="list-unstyled topbar__info">
+                        <li>
+                            <span class="topbar__info__icon">
+                                <i class="icon-mail-1"></i>
+                            </span>
+                            <a href="mailto:info@wellsfrgoinvestment.com">info@wellsfrgoinvestment.com</a>
+                        </li>
+                        <li>
+                            <span class="topbar__info__icon topbar__info__icon--phone">
+                                <i class="icon-headset"></i>
+                            </span>
+                            <a href="tel:+31202410939">+31 202 410 939</a>
+                        </li>
+                    </ul><!-- /.list-unstyled topbar__info -->
+                    <div class="topbar__right">
+                        <ul class="list-unstyled topbar__pages">
+                            <li><a href="{% url 'login' %}">sign up</a></li>
+                            <li><a href="#">career</a></li>
+                            <li><a href="{% url 'about_us' %}">media</a></li>
+                            <li><a href="{% url 'faq'  %}">Faq’s</a></li>
+                        </ul><!-- /.topbar__pages -->
+                        <div class="topbar__social">
+                            <a href="https://facebook.com">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="https://linkedin.com">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                <span class="sr-only">Linkedin</span>
+                            </a>
+                            <a href="https://youtube.com">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                                <span class="sr-only">Youtube</span>
+                            </a>
+                        </div><!-- /.topbar__social -->
+                    </div><!-- /.list-unstyled topbar__right -->
+                </div><!-- /.topbar__inner -->
+            </div><!-- /.container-fluid -->
+        </div><!-- /.topbar -->
+
+        <header class="main-header sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__logo logo-retina">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'assets/images/logo-dark.png' %}" alt="Easilon HTML" width="250">
+                        </a>
+                    </div><!-- /.main-header__logo -->
+                    <div class="main-header__right">
+                        <nav class="main-header__nav main-menu">
+                            <ul class="main-menu__list">
+
+                                <li class="megamenu">
+                                    <a href="{% url 'home' %}">Home</a>
+                                </li>
+
+
+                                 <li class="dropdown">
+                                    <a href="#">About Us</a>
+                                    <ul>
+                                        <li class="dropdown">
+                                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                        <li><a href="{% url 'faq' %}">Faq</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                <a href="{% url 'services' %}">Our Services</a>
+                                </li>
+
+
+                                   <li class="dropdown">
+                                    <a href="#"> Banking & Trading</a>
+                                    <ul>
+                                        <li class="dropdown">
+                                       <li><a  href="{% url 'login' %}">Online Banking</a></li>
+                                        <li><a href="{% url 'ppp_trading' %}">PPP Trading</a></li>
+                                    </ul>
+                                </li>
+                            
+                                <li>
+                                    <a href="{% url 'contact' %}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav><!-- /.main-header__nav -->
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- /.mobile-nav__toggler -->
+                        <a href="#" class="search-toggler main-header__search">
+                            <i class="icon-search" aria-hidden="true"></i>
+                            <span class="sr-only">Search</span>
+                        </a><!-- /.search-toggler -->
+                        <a href="cart.html" class="main-header__cart">
+                            <span class="sr-only"></span>
+                        </a><!-- /.search-toggler -->
+                        <a href="{% url 'login' %}" class="easilon-btn main-header__btn">
+                            <span>Login</span>
+                            <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
+                        </a><!-- /.easilon-btn main-header__btn -->
+                    </div><!-- /.main-header__right -->
+                </div><!-- /.main-header__inner -->
+            </div><!-- /.container-fluid -->
+        </header><!-- /.main-header -->
+
+      <section class="main-slider-one" id="home">
+    <div class="main-slider-one__carousel easilon-owl__carousel owl-carousel" data-owl-options='{
+        "margin": 0,
+        "loop": true,
+        "animateIn": "fadeIn",
+        "animateOut": "fadeOut",
+        "items": 1,
+        "autoplay": true,
+        "smartSpeed": 1000,
+        "nav": true,
+        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+        "dots": true
+    }'>
+
+        <!-- Slide 1 -->
+        <div class="item">
+            <div class="main-slider-one__item">
+                <div class="main-slider-one__bg" style="background-image: url({% static 'assets/images/backgrounds/main-slider-bg-1.png' %});"></div>
+                <div class="main-slider-one__container container">
+                    <div class="row gutter-y-60 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="main-slider-one__content">
+                                <div class="main-slider-one__top">
+                                    <div class="main-slider-one__top__inner">
+                                        <div class="main-slider-one__sub-title-shape">
+                                            <div class="main-slider-one__sub-title-shape__one"></div>
+                                            <div class="main-slider-one__sub-title-shape__two"></div>
+                                        </div>
+                                        <h5 class="main-slider-one__sub-title">
+                                            Global <span>Investment Banking</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <h2 class="main-slider-one__title">
+                                    <span class="main-slider-one__title__inner">
+                                        <span class="main-slider-one__title__text main-slider-one__title__text--1">
+                                            Strategic Capital, Advisory & Financial Expertise
+                                        </span>
+                                    </span>
+                                </h2>
+                                <div class="main-slider-one__button-group">
+                                    <div class="main-slider-one__button-group__inner">
+                                        <div class="main-slider-one__button main-slider-one__button--1">
+                                            <a href="{% url 'services' %}" class="main-slider-one__btn-1 easilon-btn">
+                                                <span>our services</span>
+                                                <span class="easilon-btn__icon">
+                                                    <i class="icon-double-right-arrow"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider-one__button__inner">
+                                        <div class="main-slider-one__button main-slider-one__button--2">
+                                            <a href="{% url 'login' %}" class="easilon-btn easilon-btn--border">
+                                                <span>get started</span>
+                                                <span class="easilon-btn__icon">
+                                                    <i class="icon-double-right-arrow"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'assets/images/shapes/main-slider-shape-1-1.png' %}" alt="shape" class="main-slider-one__shape-one">
+                <img src="{% static 'assets/images/shapes/main-slider-shape-1-2.png' %}" alt="shape" class="main-slider-one__shape-two">
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="item">
+            <div class="main-slider-one__item">
+                <div class="main-slider-one__bg" style="background-image: url({% static 'assets/images/backgrounds/main-slider-bg-2.jpg' %});"></div>
+                <div class="main-slider-one__container container">
+                    <div class="row gutter-y-60 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="main-slider-one__content">
+                                <div class="main-slider-one__top">
+                                    <div class="main-slider-one__top__inner">
+                                        <div class="main-slider-one__sub-title-shape">
+                                            <div class="main-slider-one__sub-title-shape__one"></div>
+                                            <div class="main-slider-one__sub-title-shape__two"></div>
+                                        </div>
+                                        <h5 class="main-slider-one__sub-title">
+                                            Trusted <span>Financial Advisors</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <h2 class="main-slider-one__title">
+                                    <span class="main-slider-one__title__inner">
+                                        <span class="main-slider-one__title__text main-slider-one__title__text--1">
+                                            Partnering With Institutions for Sustainable Growth
+                                        </span>
+                                    </span>
+                                </h2>
+                                <div class="main-slider-one__button-group">
+                                    <div class="main-slider-one__button-group__inner">
+                                        <div class="main-slider-one__button main-slider-one__button--1">
+                                            <a href="{% url 'services' %}" class="main-slider-one__btn-1 easilon-btn">
+                                                <span>our services</span>
+                                                <span class="easilon-btn__icon">
+                                                    <i class="icon-double-right-arrow"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider-one__button__inner">
+                                        <div class="main-slider-one__button main-slider-one__button--2">
+                                            <a href="{% url 'login' %}" class="easilon-btn easilon-btn--border">
+                                                <span>get started</span>
+                                                <span class="easilon-btn__icon">
+                                                    <i class="icon-double-right-arrow"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'assets/images/shapes/main-slider-shape-1-1.png' %}" alt="shape" class="main-slider-one__shape-one">
+                <img src="{% static 'assets/images/shapes/main-slider-shape-1-2.png' %}" alt="shape" class="main-slider-one__shape-two">
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="item">
+            <div class="main-slider-one__item">
+                <div class="main-slider-one__bg" style="background-image: url({% static 'assets/images/backgrounds/main-slider-bg-1-3.jpg' %});"></div>
+                <div class="main-slider-one__container container">
+                    <div class="row gutter-y-60 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="main-slider-one__content">
+                                <div class="main-slider-one__top">
+                                    <div class="main-slider-one__top__inner">
+                                        <div class="main-slider-one__sub-title-shape">
+                                            <div class="main-slider-one__sub-title-shape__one"></div>
+                                            <div class="main-slider-one__sub-title-shape__two"></div>
+                                        </div>
+                                        <h5 class="main-slider-one__sub-title">
+                                            Institutional <span>Market Leadership</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <h2 class="main-slider-one__title">
+                                    <span class="main-slider-one__title__inner">
+                                        <span class="main-slider-one__title__text main-slider-one__title__text--1">
+                                            Delivering Capital Markets & Advisory Solutions Worldwide
+                                        </span>
+                                    </span>
+                                </h2>
+                                <div class="main-slider-one__button-group">
+                                    <div class="main-slider-one__button-group__inner">
+                                        <div class="main-slider-one__button main-slider-one__button--1">
+                                            <a href="{% url 'services' %}" class="main-slider-one__btn-1 easilon-btn">
+                                                <span>our services</span>
+                                                <span class="easilon-btn__icon">
+                                                    <i class="icon-double-right-arrow"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider-one__button__inner">
+                                        <div class="main-slider-one__button main-slider-one__button--2">
+                                            <a href="{% url 'login' %}" class="easilon-btn easilon-btn--border">
+                                                <span>get started</span>
+                                                <span class="easilon-btn__icon">
+                                                    <i class="icon-double-right-arrow"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'assets/images/shapes/main-slider-shape-1-1.png' %}" alt="shape" class="main-slider-one__shape-one">
+                <img src="{% static 'assets/images/shapes/main-slider-shape-1-2.png' %}" alt="shape" class="main-slider-one__shape-two">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+      
+<section class="about-one section-space" id="about">
+    <div class="about-one__bg" style="background-image: url({% static 'assets/images/shapes/about-bg-1-1.png' %});"></div>
+    <div class="container">
+        <div class="row gutter-y-50">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
+                <div class="about-one__image">
+                    <div class="about-one__image__inner">
+                        <img src="{% static 'assets/images/about/about-1-1.jpg' %}" alt="about image">
+                        <img src="{% static 'assets/images/about/about-1-2.jpg' %}" alt="about image" class="about-one__image__with-border">
+                        <img src="{% static 'assets/images/shapes/about-shape-1-1.png' %}" alt="shapes" class="about-one__image__shape">
+                        <div class="about-one__experience">
+                            <div class="about-one__experience__bg" style="background-image: url({% static 'assets/images/shapes/about-experience-bg-1-1.png' %});"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-one__content">
+                    <div class="sec-title @@extraClassName">
+                        <div class="sec-title__top">
+                            <div class="sec-title__shape">
+                                <div class="sec-title__shape__one"></div>
+                                <div class="sec-title__shape__two"></div>
+                            </div>
+                            <h6 class="sec-title__tagline">welcome to Wells Fargo Investment Bank</h6>
+                        </div>
+                        <h3 class="sec-title__title">
+                            Delivering Strategic Financial Solutions for Institutions and Corporations
+                        </h3>
+                    </div>
+
+                    <div class="about-one__text-box wow fadeInUp" data-wow-duration="1500ms">
+                        <p class="about-one__text">
+                            Wells Fargo Investment Bank provides comprehensive investment banking, advisory, and capital markets solutions to corporations, financial institutions, and public sector clients. We support complex financial needs across mergers and acquisitions, debt and equity financing, risk management, and strategic advisory services.
+                            <br /><br />
+                            As a trusted financial partner, we focus on building long-term relationships grounded in expertise, disciplined risk management, and deep market insight. Our teams work collaboratively with clients to navigate evolving market conditions, unlock growth opportunities, and create sustainable long-term value.
+                            <br /><br />
+                            Backed by decades of financial experience and a strong global presence, Wells Fargo Investment Bank is committed to responsible banking practices and supporting resilient, inclusive economic growth across the markets we serve.
+                        </p>
+                    </div>
+
+                    <div class="about-one__button wow fadeInUp" data-wow-duration="1500ms">
+                        <a href="{% url 'about_us' %}" class="easilon-btn easilon-btn--border">
+                            <span>know about us</span>
+                            <span class="easilon-btn__icon">
+                                <i class="icon-double-right-arrow"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="{% static 'assets/images/shapes/about-shape-1-2.png' %}" alt="shape" class="about-one__shape">
+    <img src="{% static 'assets/images/shapes/about-money-1-1.png' %}" alt="shape" class="about-one__money">
+</section>
+
+
+
+
+
+
+<section class="about-one section-space">
+    <div class="about-one__bg" style="background-image: url({% static 'assets/images/shapes/about-bg-1-1.png' %});"></div>
+    <div class="container">
+        <div class="row gutter-y-50">
+
+            <!-- TEXT ON THE LEFT -->
+            <div class="col-lg-6">
+                <div class="about-one__content">
+                    <div class="sec-title @@extraClassName">
+                        <div class="sec-title__top">
+                            <div class="sec-title__shape">
+                                <div class="sec-title__shape__one"></div>
+                                <div class="sec-title__shape__two"></div>
+                            </div>
+                            <h6 class="sec-title__tagline">Why Clients Choose Us</h6>
+                        </div>
+                        <h3 class="sec-title__title">
+                            Trusted Insight, Experienced Professionals
+                        </h3>
+                    </div>
+
+                    <div class="about-one__text-box wow fadeInUp" data-wow-duration="1500ms">
+                        <p class="about-one__text">
+                            Our approach is grounded in delivering long-term value through disciplined execution,
+                            market insight, and a deep understanding of our clients’ strategic objectives.
+                            We are committed to supporting institutions and organizations with clarity,
+                            responsibility, and confidence in every engagement.
+                            <br /><br />
+                            Our teams of experienced financial and advisory professionals work collaboratively
+                            to provide tailored solutions across complex financial landscapes, helping clients
+                            navigate risk, seize opportunity, and achieve sustainable growth.
+                        </p>
+                    </div>
+
+                    <div class="about-one__button wow fadeInUp" data-wow-duration="1500ms">
+                        <a href="{% url 'about_us' %}" class="easilon-btn easilon-btn--border">
+                            <span>discover more</span>
+                            <span class="easilon-btn__icon">
+                                <i class="icon-double-right-arrow"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE ON THE RIGHT -->
+            <div class="col-lg-6 wow fadeInRight" data-wow-duration="1500ms">
+                <div class="about-one__image">
+                    <div class="about-one__image__inner">
+                        <img src="{% static 'assets/images/about/about-1-3.jpg' %}" alt="about image">
+                        <img src="{% static 'assets/images/shapes/about-experience-bg-1-1.webp' %}" alt="about image" class="about-one__image__with-border">
+                        <img src="{% static 'assets/images/shapes/about-shape-1-1.png' %}" alt="shapes" class="about-one__image__shape">
+                        <div class="about-one__experience">
+                            <div class="about-one__experience__bg" style="background-image: url({% static 'assets/images/shapes/about-experience-bg-1-1.webp' %});"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="{% static 'assets/images/shapes/about-shape-1-2.png' %}" alt="shape" class="about-one__shape">
+    <img src="{% static 'assets/images/shapes/about-money-1-1.png' %}" alt="shape" class="about-one__money">
+</section>
+
+
+
+<section class="services-one section-space-top" id="services">
+    <div class="services-one__bg" style="background-image: url({% static 'assets/images/shapes/services-bg-1-1.png' %});"></div>
+    <div class="container">
+        <div class="sec-title sec-title--center">
+            <div class="sec-title__top">
+                <div class="sec-title__shape">
+                    <div class="sec-title__shape__one"></div>
+                    <div class="sec-title__shape__two"></div>
+                </div>
+                <h6 class="sec-title__tagline">What We Offer</h6>
+                <div class="sec-title__shape">
+                    <div class="sec-title__shape__one"></div>
+                    <div class="sec-title__shape__two"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SLIDE -->
+    <div class="services-one__slide">
+        <h2 class="services-one__slide__text services-one__slide__text--one">Digital Banking Platforms</h2>
+        <span class="services-one__slide__icon"><i class="icon-graduation"></i></span>
+
+        <h2 class="services-one__slide__text services-one__slide__text--two">Capital Markets Access</h2>
+        <span class="services-one__slide__icon"><i class="icon-car"></i></span>
+
+        <h2 class="services-one__slide__text services-one__slide__text--one">Secure Asset Management</h2>
+        <span class="services-one__slide__icon"><i class="icon-graduation"></i></span>
+
+        <h2 class="services-one__slide__text services-one__slide__text--two">Global Payments</h2>
+        <span class="services-one__slide__icon"><i class="icon-car"></i></span>
+
+        <h2 class="services-one__slide__text services-one__slide__text--one">Investment Accounts</h2>
+        <span class="services-one__slide__icon"><i class="icon-graduation"></i></span>
+
+        <h2 class="services-one__slide__text services-one__slide__text--two">Market Advisory Services</h2>
+        <span class="services-one__slide__icon"><i class="icon-car"></i></span>
+    </div>
+
+    <div class="container">
+        <div class="services-one__main-tab-box tabs-box">
+            <div class="tab-box-buttons wow fadeInLeft" data-wow-duration="1500ms">
+                <ul class="tab-buttons">
+                    <li data-tab="#digital-banking" class="tab-btn active-btn">
+                        <div class="tab-btn__inner">
+                            digital banking
+                            <a href="service-d-digital-banking.html" class="tab-btn__icon"><i class="icon-next"></i></a>
+                        </div>
+                    </li>
+                    <li data-tab="#crypto-trading" class="tab-btn">
+                        <div class="tab-btn__inner">
+                            capital markets
+                            <a href="service-d-crypto.html" class="tab-btn__icon"><i class="icon-next"></i></a>
+                        </div>
+                    </li>
+                    <li data-tab="#online-payments" class="tab-btn">
+                        <div class="tab-btn__inner">
+                            global payments
+                            <a href="service-d-payments.html" class="tab-btn__icon"><i class="icon-next"></i></a>
+                        </div>
+                    </li>
+                    <li data-tab="#investments" class="tab-btn">
+                        <div class="tab-btn__inner">
+                            investment accounts
+                            <a href="service-d-investments.html" class="tab-btn__icon"><i class="icon-next"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tabs-content wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+
+                <!-- DIGITAL BANKING -->
+                <div class="tab active-tab fadeInUp" id="digital-banking" style="display: block;">
+                    <div class="services-one__service">
+                        <a href="service-d-digital-banking.html" class="services-one__service__image">
+                            <img src="{% static 'assets/images/services/digital-banking.webp' %}" alt="Digital Banking">
+                            <img src="{% static 'assets/images/services/digital-banking.webp' %}" alt="Digital Banking">
+                            <span class="services-one__service__overlay"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CAPITAL MARKETS -->
+                <div class="tab fadeInUp" id="crypto-trading" style="display: none;">
+                    <div class="services-one__service">
+                        <a href="service-d-crypto.html" class="services-one__service__image">
+                            <img src="{% static 'assets/images/services/crypto.jpg' %}" alt="Capital Markets">
+                            <img src="{% static 'assets/images/services/crypto.jpg' %}" alt="Capital Markets">
+                            <span class="services-one__service__overlay"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GLOBAL PAYMENTS -->
+                <div class="tab fadeInUp" id="online-payments" style="display: none;">
+                    <div class="services-one__service">
+                        <a href="service-d-payments.html" class="services-one__service__image">
+                            <img src="{% static 'assets/images/services/payments.jpg' %}" alt="Global Payments">
+                            <img src="{% static 'assets/images/services/payments.jpg' %}" alt="Global Payments">
+                            <span class="services-one__service__overlay"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- INVESTMENTS -->
+                <div class="tab fadeInUp" id="investments" style="display: none;">
+                    <div class="services-one__service">
+                        <a href="service-d-investments.html" class="services-one__service__image">
+                            <img src="{% static 'assets/images/services/investments.jpg' %}" alt="Investment Accounts">
+                            <img src="{% static 'assets/images/services/investments.jpg' %}" alt="Investment Accounts">
+                            <span class="services-one__service__overlay"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="features-one">
+        <div class="features-one__bg"></div>
+        <div class="container">
+            <div class="features-one__inner">
+                <div class="features-one__inner__bg" style="background-image: url({% static 'assets/images/shapes/features-inner-bg-1-1.png' %});"></div>
+                <div class="features-one__image wow fadeInLeft" data-wow-duration="1500ms"
+                     style="background-image: url({% static 'assets/images/resources/features-1-1.png' %});"></div>
+
+                <div class="features-one__content wow fadeInRight" data-wow-duration="1500ms">
+                    <div class="sec-title">
+                        <div class="sec-title__top">
+                            <div class="sec-title__shape">
+                                <div class="sec-title__shape__one"></div>
+                                <div class="sec-title__shape__two"></div>
+                            </div>
+                            <h6 class="sec-title__tagline">Our Core Strengths</h6>
+                        </div>
+                        <h3 class="sec-title__title">Secure. Scalable. Institutional.</h3>
+                    </div>
+
+                    <div class="features-one__text-box">
+                        <p class="features-one__text">
+                            Our platforms and services are designed to support complex financial operations
+                            with efficiency, transparency, and institutional-grade security across global markets.
+                        </p>
+                    </div>
+
+                    <div class="features-one__features">
+                        <div class="features-one__features__item">
+                            <span class="features-one__features__icon">
+                                <i class="icon-low-price"></i>
+                            </span>
+                            <div class="features-one__features__content">
+                                <h3 class="features-one__features__title">Transparent Pricing</h3>
+                                <p class="features-one__features__text">
+                                    Clear, structured pricing models aligned with regulatory and institutional standards.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="features-one__features__item">
+                            <span class="features-one__features__icon">
+                                <i class="icon-fast-time"></i>
+                            </span>
+                            <div class="features-one__features__content">
+                                <h3 class="features-one__features__title">Efficient Execution</h3>
+                                <p class="features-one__features__text">
+                                    Streamlined processes that support timely transactions and informed decision-making.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="features-one__features__item">
+                            <span class="features-one__features__icon">
+                                <i class="icon-smartphone"></i>
+                            </span>
+                            <div class="features-one__features__content">
+                                <h3 class="features-one__features__title">Advanced Control & Insights</h3>
+                                <p class="features-one__features__text">
+                                    Real-time reporting, monitoring, and analytics to support strategic financial oversight.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="{% static 'assets/images/shapes/features-money-1-1.png' %}" alt="secure banking" class="features-one__money">
+    </section>
+</section>
+
+
+
+       
+
+
+<section class="company-transparency-one section-space">
+    <div class="company-transparency-one__bg" style="background-image: url({% static 'assets/images/backgrounds/company-transparency-bg-1-1.jpg' %});"></div>
+
+    <div class="container">
+        <div class="row gutter-y-40">
+            <div class="col-lg-12">
+                <div class="company-transparency-one__content">
+                    <div class="sec-title @@extraClassName">
+                        <div class="sec-title__top">
+                            <div class="sec-title__shape">
+                                <div class="sec-title__shape__one"></div>
+                                <div class="sec-title__shape__two"></div>
+                            </div>
+                            <h6 class="sec-title__tagline">Transparency & Governance</h6>
+                        </div>
+                        <h3 class="sec-title__title">
+                            Our Core <br> Principles
+                        </h3>
+                    </div>
+
+                    <div class="company-transparency-one__main-tab-box tabs-box wow fadeInUp animated" data-wow-duration="1500ms">
+                        <ul class="tab-buttons">
+                            <li data-tab="#innovative" class="tab-btn active-btn">Innovation</li>
+                            <li data-tab="#talent" class="tab-btn">Expertise</li>
+                            <li data-tab="#enabling" class="tab-btn">Client Enablement</li>
+                            <li data-tab="#commercially-responsible" class="tab-btn">Responsible Banking</li>
+                        </ul>
+
+                        <div class="tabs-content">
+                            <!-- INNOVATION -->
+                            <div class="tab active-tab fadeInUp animated" data-wow-delay="200ms" id="innovative" style="display: block;">
+                                <p class="tabs-content__text">
+                                    We apply innovation with discipline — leveraging secure digital infrastructure, 
+                                    advanced financial technology, and modern delivery models to enhance efficiency, 
+                                    resilience, and client experience across our banking and investment services.
+                                </p>
+                            </div>
+
+                            <!-- TALENT -->
+                            <div class="tab fadeInUp animated" data-wow-delay="200ms" id="talent">
+                                <p class="tabs-content__text">
+                                    Our strength lies in our people. We are supported by seasoned professionals across 
+                                    finance, risk management, technology, and compliance, working together to deliver 
+                                    informed guidance, operational excellence, and dependable service.
+                                </p>
+                            </div>
+
+                            <!-- ENABLING -->
+                            <div class="tab fadeInUp animated" data-wow-delay="200ms" id="enabling">
+                                <p class="tabs-content__text">
+                                    We empower institutions, businesses, and individuals through accessible financial 
+                                    solutions that promote clarity, control, and informed decision-making — enabling 
+                                    sustainable growth in a dynamic global market.
+                                </p>
+                            </div>
+
+                            <!-- RESPONSIBLE BANKING -->
+                            <div class="tab fadeInUp animated" data-wow-delay="200ms" id="commercially-responsible">
+                                <p class="tabs-content__text">
+                                    Responsible banking is central to our operations. We prioritize regulatory awareness, 
+                                    data protection, ethical conduct, and long-term value creation — building trust through 
+                                    prudent risk management and transparent financial practices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="company-transparency-one__call wow fadeInUp" data-wow-duration="1500ms">
+                        <span class="company-transparency-one__call__icon">
+                            <i class="icon-telephone"></i>
+                        </span>
+                        <div class="company-transparency-one__call__content">
+                            <p class="company-transparency-one__call__title">Client Support & Enquiries</p>
+                            <a href="tel:+31202410939" class="company-transparency-one__call__number">
+                                +31 202 410 939
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="{% static 'assets/images/shapes/company-transparency-shape-1-1.png' %}" alt="shape" class="company-transparency-one__shape">
+</section>
+
+
+<section class="faq-one section-space">
+    <div class="container">
+        <div class="row gutter-y-50 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                <div class="faq-one__image">
+                    <div class="faq-one__image__inner">
+                        <img src="{% static 'assets/images/faq/faq-1-1.jpg' %}" alt="faq">
+                    </div>
+                    <img src="{% static 'assets/images/shapes/faq-border-1-1.png' %}" alt="border" class="faq-one__image__border">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="faq-one__content">
+                    <div class="sec-title @@extraClassName">
+                        <div class="sec-title__top">
+                            <div class="sec-title__shape">
+                                <div class="sec-title__shape__one"></div>
+                                <div class="sec-title__shape__two"></div>
+                            </div>
+                            <h6 class="sec-title__tagline">Client Information</h6>
+                        </div>
+                        <h3 class="sec-title__title">
+                            Frequently Asked <br> Questions
+                        </h3>
+                    </div>
+
+                    <div class="faq-one__accordion">
+                        <div class="faq-accordion easilon-accordion" data-grp-name="easilon-accordion">
+
+                            <!-- FAQ 1 -->
+                            <div class="accordion active wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <div class="accordion-title">
+                                    <h4>
+                                        What services are available through your digital banking platform?
+                                        <span class="accordion-title__icon"></span>
+                                    </h4>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="inner">
+                                        <p>
+                                            Our platform provides secure digital banking capabilities, including account 
+                                            management, fund transfers, payment processing, wallet services, transaction 
+                                            monitoring, and exchange functionality. We do not provide lending, credit, 
+                                            or loan-based products.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 2 -->
+                            <div class="accordion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="50ms">
+                                <div class="accordion-title">
+                                    <h4>
+                                        How do I register and gain access to the platform?
+                                        <span class="accordion-title__icon"></span>
+                                    </h4>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="inner">
+                                        <p>
+                                            Registration is completed entirely online. After creating an account and 
+                                            completing the required verification steps, clients gain secure access to 
+                                            their digital banking dashboard and services.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 3 -->
+                            <div class="accordion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                                <div class="accordion-title">
+                                    <h4>
+                                        Are fees and charges clearly disclosed?
+                                        <span class="accordion-title__icon"></span>
+                                    </h4>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="inner">
+                                        <p>
+                                            Yes. We are committed to transparency. All applicable fees are disclosed 
+                                            clearly prior to transaction confirmation, ensuring clients can make 
+                                            informed financial decisions without unexpected charges.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="{% static 'assets/images/shapes/faq-shape-1-1.png' %}" alt="shape" class="faq-one__shape">
+</section>
+
+
+
+<section class="testimonials-one section-space" id="testimonials">
+    <div class="container">
+        <div class="row gutter-y-50 align-items-center">
+            <div class="col-xl-8 col-lg-7">
+                <div class="testimonials-one__slider">
+                    <div class="testimonials-one__slider__bg" style="background-image: url({% static 'assets/images/shapes/testimonial-card-bg-1-1.png' %});"></div>
+
+                    <div class="testimonials-one__carousel easilon-slick__carousel" data-slick-options='{
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1,
+                        "asNavFor": ".testimonials-one__carousel-thumbs",
+                        "autoplay": true,
+                        "autoplaySpeed": 4000,
+                        "speed": 2000,
+                        "infinite": true,
+                        "arrows": false,
+                        "dots": true
+                    }'>
+
+                        <!-- Testimonial 1 -->
+                        <div class="testimonials-one__item">
+                            <div class="testimonial-card">
+                                <svg class="testimonial-card__icon" viewBox="0 0 56 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 25.4448H11.1378L3.71254 40.2951H14.8503L22.2756 25.4448V3.16919H0V25.4448Z" />
+                                    <path d="M29.7004 3.16919V25.4448H40.8382L33.413 40.2951H44.5508L51.976 25.4448V3.16919H29.7004Z" />
+                                </svg>
+                                <div class="easilon-ratings">
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                </div>
+                                <p class="testimonial-card__quote">
+                                    “The platform provides a secure and efficient digital banking experience. 
+                                    Transactions are seamless, and account management is intuitive and fully reliable.”
+                                </p>
+                                <div class="testimonial-card__identity">
+                                    <h4 class="testimonial-card__name">Michael G. Ware</h4>
+                                    <p class="testimonial-card__designation">Managing Director</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonials-one__item">
+                            <div class="testimonial-card">
+                                <svg class="testimonial-card__icon" viewBox="0 0 56 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 25.4448H11.1378L3.71254 40.2951H14.8503L22.2756 25.4448V3.16919H0V25.4448Z" />
+                                    <path d="M29.7004 3.16919V25.4448H40.8382L33.413 40.2951H44.5508L51.976 25.4448V3.16919H29.7004Z" />
+                                </svg>
+                                <div class="easilon-ratings">
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                </div>
+                                <p class="testimonial-card__quote">
+                                    “Customer support is professional and prompt. All inquiries, transfers, 
+                                    and account requests are handled efficiently with security and transparency.”
+                                </p>
+                                <div class="testimonial-card__identity">
+                                    <h4 class="testimonial-card__name">Judith White</h4>
+                                    <p class="testimonial-card__designation">Business Consultant</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonials-one__item">
+                            <div class="testimonial-card">
+                                <svg class="testimonial-card__icon" viewBox="0 0 56 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 25.4448H11.1378L3.71254 40.2951H14.8503L22.2756 25.4448V3.16919H0V25.4448Z" />
+                                    <path d="M29.7004 3.16919V25.4448H40.8382L33.413 40.2951H44.5508L51.976 25.4448V3.16919H29.7004Z" />
+                                </svg>
+                                <div class="easilon-ratings">
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                </div>
+                                <p class="testimonial-card__quote">
+                                    “The digital tools are intuitive and transparent. Real-time transaction updates 
+                                    allow me to monitor all account activity with confidence.”
+                                </p>
+                                <div class="testimonial-card__identity">
+                                    <h4 class="testimonial-card__name">Mike Hardson</h4>
+                                    <p class="testimonial-card__designation">Corporate Client</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonials-one__item">
+                            <div class="testimonial-card">
+                                <svg class="testimonial-card__icon" viewBox="0 0 56 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 25.4448H11.1378L3.71254 40.2951H14.8503L22.2756 25.4448V3.16919H0V25.4448Z" />
+                                    <path d="M29.7004 3.16919V25.4448H40.8382L33.413 40.2951H44.5508L51.976 25.4448V3.16919H29.7004Z" />
+                                </svg>
+                                <div class="easilon-ratings">
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                    <span class="easilon-ratings__icon"><i class="fa fa-star"></i></span>
+                                </div>
+                                <p class="testimonial-card__quote">
+                                    “A dependable and secure online banking platform that simplifies 
+                                    both personal and business financial management.”
+                                </p>
+                                <div class="testimonial-card__identity">
+                                    <h4 class="testimonial-card__name">Alexsia Jorgina</h4>
+                                    <p class="testimonial-card__designation">Entrepreneur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Thumbnails -->
+                    <div class="testimonials-one__carousel-thumbs easilon-slick__carousel" data-slick-options='{
+                        "asNavFor": ".testimonials-one__carousel",
+                        "slidesToShow": 3,
+                        "slidesToScroll": 1,
+                        "autoplay": true,
+                        "autoplaySpeed": 3000,
+                        "infinite": true,
+                        "focusOnSelect": true,
+                        "dots": false,
+                        "arrows": false
+                    }'>
+                        <div><img src="{% static 'assets/images/testimonials/testimonial-1-1.jpg' %}" alt="slider-thumbs"></div>
+                        <div><img src="{% static 'assets/images/testimonials/testimonial-1-2.jpg' %}" alt="slider-thumbs"></div>
+                        <div><img src="{% static 'assets/images/testimonials/testimonial-1-3.jpg' %}" alt="slider-thumbs"></div>
+                        <div><img src="{% static 'assets/images/testimonials/testimonial-1-4.jpg' %}" alt="slider-thumbs"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fun Facts -->
+            <div class="col-xl-4 col-lg-5">
+                <div class="testimonials-one__funfact">
+                    <div class="row gutter-y-30">
+                        <div class="col-md-6">
+                            <div class="testimonials-one__funfact__left">
+                                <div class="testimonials-one__funfact__image testimonials-one__funfact__single wow fadeInUp" data-wow-duration="1500ms">
+                                    <img src="{% static 'assets/images/resources/funfact-1-1.jpg' %}" alt="funfact">
+                                </div>
+                                <div class="funfact-one__item testimonials-one__funfact__single wow fadeInUp" data-wow-duration="1500ms">
+                                    <h3 class="funfact-one__item__number count-box">
+                                        <span class="count-text" data-stop="99" data-speed="1500"></span>%
+                                    </h3>
+                                    <h4 class="funfact-one__item__title">Platform Uptime</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="testimonials-one__funfact__right">
+                                <div class="funfact-one__item testimonials-one__funfact__single wow fadeInUp" data-wow-duration="1500ms">
+                                    <h3 class="funfact-one__item__number count-box">
+                                        <span class="count-text" data-stop="8.5" data-speed="1500"></span>k
+                                    </h3>
+                                    <h4 class="funfact-one__item__title">Active Users</h4>
+                                </div>
+                                <div class="funfact-one__item testimonials-one__funfact__single wow fadeInUp" data-wow-duration="1500ms">
+                                    <h3 class="funfact-one__item__number count-box">
+                                         €<span class="count-text" data-stop="95" data-speed="1500"></span>k
+                                    </h3>
+                                    <h4 class="funfact-one__item__title">Daily Transaction Volume</h4>
+                                </div>
+                                <div class="testimonials-one__funfact__image testimonials-one__funfact__single wow fadeInUp" data-wow-duration="1500ms">
+                                    <img src="{% static 'assets/images/resources/funfact-1-2.jpg' %}" alt="funfact">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section style="margin-top: 100px;" class="quick-loan-one">
+    <div class="container">
+        <div class="quick-loan-one__inner wow fadeInUp" data-wow-duration="1500ms">
+            
+            <!-- Background Image -->
+            <div class="quick-loan-one__bg">
+                <div class="quick-loan-one__bg__inner" style="background-image: url({% static 'assets/images/resources/quick-loan-1-1-.jpg' %});"></div>
+            </div><!-- /.quick-loan-one__bg -->
+
+            <!-- Content -->
+            <div class="quick-loan-one__content">
+                <div class="sec-title @@extraClassName">
+                    <div class="sec-title__top">
+                        <div class="sec-title__shape">
+                            <div class="sec-title__shape__one"></div>
+                            <div class="sec-title__shape__two"></div>
+                        </div>
+                        <h6 class="sec-title__tagline">Instant Business Banking</h6>
+                    </div>
+                    <h3 class="sec-title__title">Fast, Secure, and Flexible Digital Banking</h3>
+                </div><!-- /.sec-title -->
+
+                <p class="quick-loan-one__text">
+                    At <strong>Wells fargo</strong>, we empower businesses with instant access to advanced digital banking tools. 
+                    Manage accounts, make payments, and track transactions securely, all in real time, from anywhere.
+                </p>
+
+                <a href="{% url 'login' %}" class="easilon-btn easilon-btn--white">
+                    <span>Get Started</span>
+                    <span class="easilon-btn__icon">
+                        <i class="icon-double-right-arrow"></i>
+                    </span>
+                </a><!-- /.easilon-btn -->
+
+                <img src="{% static 'assets/images/shapes/quick-loan-money-1-1.png' %}" alt="money" class="quick-loan-one__money">
+            </div><!-- /.quick-loan-one__content -->
+        </div><!-- /.quick-loan-one__inner -->
+    </div><!-- /.container -->
+</section><!-- /.quick-loan-one -->
+
+<footer class="main-footer main-footer--home">
+    <div class="main-footer__bg" style="background-image: url({% static 'assets/images/shapes/footer-bg-1-1.png' %});"></div>
+    
+    <div class="main-footer__top">
+        <div class="container">
+            <div class="row gutter-y-40">
+                <!-- About / Newsletter -->
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <div class="footer-widget footer-widget--about">
+                        <a href="{% url 'home' %}" class="footer-widget__logo">
+                            <img src="{% static 'assets/images/logo-light.png' %}" width="150" alt="NIBC Netherlands">
+                        </a>
+                        <p>Subscribe to our newsletter to stay up-to-date on the latest digital banking tools and financial insights for your business.</p>
+                        <form action="#" data-url="MAILCHIMP_FORM_URL" class="footer-widget__newsletter mc-form">
+                            <input type="text" name="EMAIL" placeholder="Enter your email">
+                            <button type="submit">
+                                <span class="sr-only">submit</span>
+                                <i class="icon-right-arrow"></i>
+                            </button>
+                        </form>
+                        <div class="mc-form__response"></div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                    <div class="footer-widget footer-widget--links footer-widget--links-one">
+                        <h2 class="footer-widget__title">Explore</h2>
+                        <ul class="list-unstyled footer-widget__links">
+                            <li><a href="{% url 'about_us' %}">About Us</a></li>
+                            <li><a href="{% url 'services' %}">Our Services</a></li>
+                            <li><a>Banking & Trading</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-xl-4 col-lg-6 col-md-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                    <div class="footer-widget footer-widget--contact">
+                        <h2 class="footer-widget__title">Get in Touch</h2>
+                        <ul class="list-unstyled footer-widget__info">
+                            <li>
+                                <a href="https://www.google.com/maps">Nieuwezids Voorburgwal 162, Amsterdam, Netherlands</a>
+                            </li>
+                            <li>
+                                <span class="footer-widget__info__icon"><i class="icon-paper-plane"></i></span>
+                                <a href="mailto:info@wellsfrgoinvestment.com">info@wellsfrgoinvestment.com</a>
+                            </li>
+                            <li>
+                                <span class="footer-widget__info__icon"><i class="icon-telephone"></i></span>
+                                <a href="tel:+31202410939">+31 202 410 939</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="main-footer__bottom">
+        <div class="container">
+            <div class="main-footer__bottom__inner">
+                <div class="row gutter-y-40 align-items-center">
+                    <div class="col-md-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="000ms">
+                        <div class="main-footer__social social-links-two">
+                            <a href="https://facebook.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="https://twitter.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="https://instagram.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                            <a href="https://youtube.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Youtube</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="main-footer__bottom__copyright">
+                            <p class="main-footer__copyright">
+                                &copy; Copyright <span class="dynamic-year"></span> wellsfrgoinvestment.com All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-close"></i></span>
+            <div class="logo-box logo-retina">
+                <a href="{% url 'home' %}" aria-label="logo image"><img src="{% static 'assets/images/logo-light.png' %}" width="155" alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <span class="mobile-nav__contact__icon"><i class="fa fa-envelope"></i></span>
+                    <a href="mailto:info@wellsfrgoinvestment.com">info@wellsfrgoinvestment.com</a>
+                </li>
+                <li>
+                    <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
+                    <a href="tel:+9156980036420">+91 5698 0036 420</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__social">
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://twitter.com">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a href="https://instagram.com">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+                <a href="https://youtube.com">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    <span class="sr-only">Youtube</span>
+                </a>
+            </div><!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="easilon-btn">
+                    <span class="easilon-btn__icon"><i class="icon-search"></i></span>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+    <script src="{% static 'assets/vendors/jquery/jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ui/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/nouislider/nouislider.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/tiny-slider/tiny-slider.js' %}"></script>
+    <script src="{% static 'assets/vendors/wnumb/wNumb.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/slick/slick.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/wow/wow.js' %}"></script>
+    <script src="{% static 'assets/vendors/imagesloaded/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/isotope/isotope.js' %}"></script>
+    <script src="{% static 'assets/vendors/countdown/countdown.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-circleType/jquery.circleType.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-lettering/jquery.lettering.min.js' %}"></script>
+    <!-- template js -->
+    <script src="{% static 'assets/js/easilon.js' %}"></script>
+</body>
+
+</html>

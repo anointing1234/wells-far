@@ -1,0 +1,521 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <!-- SEO Optimized Title & Description -->
+    <title>Wells Fargo Investment Bank | Global Investment & Financial Services</title>
+    <meta name="description" content="Wells Fargo Investment Bank delivers world-class investment banking, capital markets, advisory, and financial solutions. We support corporations, institutions, and governments with trusted expertise, strategic insight, and long-term financial value." />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Wells Fargo Investment Bank | Investment & Financial Solutions" />
+    <meta property="og:description" content="Comprehensive investment banking, advisory, and capital markets services backed by trusted financial expertise." />
+    <meta property="og:image" content="{% static 'assets/images/your-og-image.jpg' %}" />
+    <meta property="og:type" content="website" />
+
+
+    <!-- Favicons -->
+   <link rel="icon" href="{% static "assets/images/favicons/favicon.ico" %}" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/animate/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jquery-ui/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jarallax/jarallax.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/nouislider/nouislider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/nouislider/nouislider.pips.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/tiny-slider/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/easilon-icons/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel/css/owl.theme.default.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendors/slick/slick.css' %}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/easilon.css' %}" />
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+  
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <div class="topbar">
+            <div class="container-fluid">
+                <div class="topbar__inner">
+                    <ul class="list-unstyled topbar__info">
+                        <li>
+                            <span class="topbar__info__icon">
+                                <i class="icon-mail-1"></i>
+                            </span>
+                            <a href="mailto:info@wellsfrgoinvestment.com">info@wellsfrgoinvestment.com</a>
+                        </li>
+                        <li>
+                            <span class="topbar__info__icon topbar__info__icon--phone">
+                                <i class="icon-headset"></i>
+                            </span>
+                            <a href="tel:+31202410939">+31 202 410 939</a>
+                        </li>
+                    </ul><!-- /.list-unstyled topbar__info -->
+                    <div class="topbar__right">
+                        <ul class="list-unstyled topbar__pages">
+                            <li><a href="{% url 'login' %}">sign up</a></li>
+                            <li><a href="#">career</a></li>
+                            <li><a href="{% url 'about_us' %}">media</a></li>
+                            <li><a href="{% url 'faq'  %}">Faq’s</a></li>
+                        </ul><!-- /.topbar__pages -->
+                        <div class="topbar__social">
+                            <a href="https://facebook.com">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="https://linkedin.com">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                <span class="sr-only">Linkedin</span>
+                            </a>
+                            <a href="https://youtube.com">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                                <span class="sr-only">Youtube</span>
+                            </a>
+                        </div><!-- /.topbar__social -->
+                    </div><!-- /.list-unstyled topbar__right -->
+                </div><!-- /.topbar__inner -->
+            </div><!-- /.container-fluid -->
+        </div><!-- /.topbar -->
+
+        <header class="main-header sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__logo logo-retina">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'assets/images/logo-dark.png' %}" alt="Easilon HTML" width="250">
+                        </a>
+                    </div><!-- /.main-header__logo -->
+                    <div class="main-header__right">
+                        <nav class="main-header__nav main-menu">
+                            <ul class="main-menu__list">
+
+                                <li class="megamenu">
+                                    <a href="{% url 'home' %}">Home</a>
+                                </li>
+
+
+                                 <li class="dropdown">
+                                    <a href="#">About Us</a>
+                                    <ul>
+                                        <li class="dropdown">
+                                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                        <li><a href="{% url 'faq' %}">Faq</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                <a href="{% url 'services' %}">Our Services</a>
+                                </li>
+
+
+                                   <li class="dropdown">
+                                    <a href="#"> Banking & Trading</a>
+                                    <ul>
+                                        <li class="dropdown">
+                                       <li><a  href="{% url 'login' %}">Online Banking</a></li>
+                                        <li><a href="{% url 'ppp_trading' %}">PPP Trading</a></li>
+                                    </ul>
+                                </li>
+                            
+                                <li>
+                                    <a href="{% url 'contact' %}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav><!-- /.main-header__nav -->
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- /.mobile-nav__toggler -->
+                        <a href="#" class="search-toggler main-header__search">
+                            <i class="icon-search" aria-hidden="true"></i>
+                            <span class="sr-only">Search</span>
+                        </a><!-- /.search-toggler -->
+                        <a href="cart.html" class="main-header__cart">
+                            <span class="sr-only"></span>
+                        </a><!-- /.search-toggler -->
+                        <a href="{% url 'login' %}" class="easilon-btn main-header__btn">
+                            <span>Login</span>
+                            <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
+                        </a><!-- /.easilon-btn main-header__btn -->
+                    </div><!-- /.main-header__right -->
+                </div><!-- /.main-header__inner -->
+            </div><!-- /.container-fluid -->
+        </header><!-- /.main-header -->
+
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url({% static 'assets/images/backgrounds/page-header-bg-1-1.jpg' %});"></div>
+            <!-- /.page-header__bg -->
+            <div class="container">
+                <div class="page-header__content">
+                    <h2 class="page-header__title">Contact Us</h2>
+                    <ul class="easilon-breadcrumb list-unstyled">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><span>Contact Us</span></li>
+                    </ul><!-- /.thm-breadcrumb list-unstyled -->
+                </div><!-- /.page-header__content -->
+            </div><!-- /.container -->
+            <div class="page-header__border-box">
+                <div class="page-header__border page-header__border--1"></div><!-- /.page-header__border -->
+                <div class="page-header__border page-header__border--2"></div><!-- /.page-header__border -->
+                <div class="page-header__border page-header__border--3"></div><!-- /.page-header__border -->
+                <div class="page-header__border page-header__border--4"></div><!-- /.page-header__border -->
+                <div class="page-header__border page-header__border--5"></div><!-- /.page-header__border -->
+            </div><!-- /.page-header__border-box -->
+        </section><!-- /.page-header -->
+
+        <section class="contact-one section-space">
+            <div class="container">
+                <div class="row gutter-y-50 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="contact-one__image wow fadeInLeft" data-wow-duration="1500ms" style="background-image: url({% static 'assets/images/backgrounds/page-header-bg-1-1.jpg' %});">
+                            <div class="contact-one__info list-unstyled">
+                                <div class="contact-one__info__shape"></div><!-- /.contact-one__info__shape -->
+                                <div class="contact-one__info__inner">
+                                    <div class="contact-one__info__item">
+                                        <span class="contact-one__info__icon">
+                                            <i class="icon-location"></i>
+                                        </span><!-- /.contact-one__info__icon -->
+                                        <div class="contact-one__info__content">
+                                            <h4 class="contact-one__info__title">Mailing Address</h4><!-- /.contact-one__info__title -->
+                                            <a href="https://maps.app.goo.gl/wpr8sgirX4NK6VsU7" class="contact-one__info__text">Nieuwezids Voorburgwal 162, Amsterdam, Netherlands</a><!-- /.contact-one__info__text -->
+                                        </div><!-- /.contact-one__info__content -->
+                                    </div><!-- /.contact-one__info__item -->
+                                    <div class="contact-one__info__item">
+                                        <span class="contact-one__info__icon">
+                                            <i class="icon-telephone"></i>
+                                        </span><!-- /.contact-one__info__icon -->
+                                        <div class="contact-one__info__content">
+                                            <h4 class="contact-one__info__title">Quick Contact</h4><!-- /.contact-one__info__title -->
+                                            <a href="tel:+31202410939" class="contact-one__info__text">+31 202 410 939</a><!-- /.contact-one__info__text -->
+                                        </div><!-- /.contact-one__info__content -->
+                                    </div><!-- /.contact-one__info__item -->
+                                    <div class="contact-one__info__item">
+                                        <span class="contact-one__info__icon">
+                                            <i class="icon-mail"></i>
+                                        </span><!-- /.contact-one__info__icon -->
+                                        <div class="contact-one__info__content">
+                                            <h4 class="contact-one__info__title">support email</h4><!-- /.contact-one__info__title -->
+                                            <a href="mailto:info@wellsfrgoinvestment.com" class="contact-one__info__text">info@wellsfrgoinvestment.com</a><!-- /.contact-one__info__text -->
+                                        </div><!-- /.contact-one__info__content -->
+                                    </div><!-- /.contact-one__info__item -->
+                                </div><!-- /.contact-one__info__inner -->
+                            </div><!-- /.contact-one__info -->
+                        </div><!-- /.contact-one__image -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <form class="contact-one__form contact-form-validated form-one wow fadeInRight" data-wow-duration="1500ms" action="inc/sendemail.php">
+                            <h2 class="contact-one__form__title">Leave us a message</h2><!-- /.contact-one__form__title -->
+                            <div class="form-one__group">
+                                <div class="form-one__control">
+                                    <input type="text" name="name" placeholder="Your Name">
+                                </div><!-- /.form-one__control -->
+                                <div class="form-one__control">
+                                    <input type="email" name="email" placeholder="Your Email">
+                                </div><!-- /.form-one__control -->
+                                <div class="form-one__control form-one__control--full">
+                                    <div class="form-one__control__select">
+                                        <label class="sr-only" for="select-subject">Select Subject</label>
+                                        <select class="selectpicker" id="select-subject" aria-label="Subject line">
+                                            <option selected>Select Subject</option>
+                                            <option value="1">home loan</option>
+                                            <option value="2">personal loan</option>
+                                            <option value="3">business loan</option>
+                                            <option value="4">study loan</option>
+                                            <option value="5">bike loan</option>
+                                            <option value="6">property loan</option>
+                                        </select>
+                                    </div><!-- /.form-one__control__select -->
+                                </div><!-- /.form-one__control form-one__control--full -->
+                                <div class="form-one__control form-one__control--full">
+                                    <textarea name="message" placeholder="Write Message"></textarea>
+                                </div><!-- /.form-one__control -->
+                                <div class="form-one__control form-one__control--full">
+                                    <button type="submit" class="contact-one__form__btn easilon-btn"><span>send message</span></button>
+                                </div><!-- /.form-one__control -->
+                            </div><!-- /.form-one__group -->
+                        </form>
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row gutter-y-50 -->
+            </div><!-- /.container -->
+        </section><!-- /.contact-one section-space -->
+
+    <section class="contact-map">
+    <div class="container-fluid">
+        <div class="google-map google-map__contact">
+            <iframe
+                title="Google Map - Nieuwezids Voorburgwal 162, Amsterdam"
+                src="https://www.google.com/maps?q=Nieuwezids+Voorburgwal+162,+Amsterdam,+Netherlands&output=embed"
+                class="map__contact"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <!-- /.google-map -->
+    </div><!-- /.container-fluid -->
+</section><!-- /.contact-map -->
+
+
+
+
+
+<section style="margin-top: 100px;" class="quick-loan-one">
+    <div class="container">
+        <div class="quick-loan-one__inner wow fadeInUp" data-wow-duration="1500ms">
+            
+            <!-- Background Image -->
+            <div class="quick-loan-one__bg">
+                <div class="quick-loan-one__bg__inner" style="background-image: url({% static 'assets/images/resources/quick-loan-1-1-.jpg' %});"></div>
+            </div><!-- /.quick-loan-one__bg -->
+
+            <!-- Content -->
+            <div class="quick-loan-one__content">
+                <div class="sec-title @@extraClassName">
+                    <div class="sec-title__top">
+                        <div class="sec-title__shape">
+                            <div class="sec-title__shape__one"></div>
+                            <div class="sec-title__shape__two"></div>
+                        </div>
+                        <h6 class="sec-title__tagline">Instant Business Banking</h6>
+                    </div>
+                    <h3 class="sec-title__title">Fast, Secure, and Flexible Digital Banking</h3>
+                </div><!-- /.sec-title -->
+
+                <p class="quick-loan-one__text">
+                    At <strong>Wells fargo</strong>, we empower businesses with instant access to advanced digital banking tools. 
+                    Manage accounts, make payments, and track transactions securely, all in real time, from anywhere.
+                </p>
+
+                <a href="{% url 'login' %}" class="easilon-btn easilon-btn--white">
+                    <span>Get Started</span>
+                    <span class="easilon-btn__icon">
+                        <i class="icon-double-right-arrow"></i>
+                    </span>
+                </a><!-- /.easilon-btn -->
+
+                <img src="{% static 'assets/images/shapes/quick-loan-money-1-1.png' %}" alt="money" class="quick-loan-one__money">
+            </div><!-- /.quick-loan-one__content -->
+        </div><!-- /.quick-loan-one__inner -->
+    </div><!-- /.container -->
+</section><!-- /.quick-loan-one -->
+
+<footer class="main-footer main-footer--home">
+    <div class="main-footer__bg" style="background-image: url({% static 'assets/images/shapes/footer-bg-1-1.png' %});"></div>
+    
+    <div class="main-footer__top">
+        <div class="container">
+            <div class="row gutter-y-40">
+                <!-- About / Newsletter -->
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <div class="footer-widget footer-widget--about">
+                        <a href="{% url 'home' %}" class="footer-widget__logo">
+                            <img src="{% static 'assets/images/logo-light.png' %}" width="150" alt="NIBC Netherlands">
+                        </a>
+                        <p>Subscribe to our newsletter to stay up-to-date on the latest digital banking tools and financial insights for your business.</p>
+                        <form action="#" data-url="MAILCHIMP_FORM_URL" class="footer-widget__newsletter mc-form">
+                            <input type="text" name="EMAIL" placeholder="Enter your email">
+                            <button type="submit">
+                                <span class="sr-only">submit</span>
+                                <i class="icon-right-arrow"></i>
+                            </button>
+                        </form>
+                        <div class="mc-form__response"></div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                    <div class="footer-widget footer-widget--links footer-widget--links-one">
+                        <h2 class="footer-widget__title">Explore</h2>
+                        <ul class="list-unstyled footer-widget__links">
+                            <li><a href="{% url 'about_us' %}">About Us</a></li>
+                            <li><a href="{% url 'services' %}">Our Services</a></li>
+                            <li><a>Banking & Trading</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-xl-4 col-lg-6 col-md-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                    <div class="footer-widget footer-widget--contact">
+                        <h2 class="footer-widget__title">Get in Touch</h2>
+                        <ul class="list-unstyled footer-widget__info">
+                            <li>
+                                <a href="https://www.google.com/maps">Nieuwezids Voorburgwal 162, Amsterdam, Netherlands</a>
+                            </li>
+                            <li>
+                                <span class="footer-widget__info__icon"><i class="icon-paper-plane"></i></span>
+                                <a href="mailto:info@wellsfrgoinvestment.com">info@wellsfrgoinvestment.com</a>
+                            </li>
+                            <li>
+                                <span class="footer-widget__info__icon"><i class="icon-telephone"></i></span>
+                                <a href="tel:+31202410939">+31 202 410 939</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="main-footer__bottom">
+        <div class="container">
+            <div class="main-footer__bottom__inner">
+                <div class="row gutter-y-40 align-items-center">
+                    <div class="col-md-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="000ms">
+                        <div class="main-footer__social social-links-two">
+                            <a href="https://facebook.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="https://twitter.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="https://instagram.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                            <a href="https://youtube.com">
+                                <span class="social-links-two__icon">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </span>
+                                <span class="sr-only">Youtube</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="main-footer__bottom__copyright">
+                            <p class="main-footer__copyright">
+                                &copy; Copyright <span class="dynamic-year"></span> wellsfrgoinvestment.com All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-close"></i></span>
+            <div class="logo-box logo-retina">
+                <a href="{% url 'home' %}" aria-label="logo image"><img src="{% static 'assets/images/logo-light.png' %}" width="155" alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <span class="mobile-nav__contact__icon"><i class="fa fa-envelope"></i></span>
+                    <a href="mailto:info@wellsfrgoinvestment.com">info@wellsfrgoinvestment.com</a>
+                </li>
+                <li>
+                    <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
+                    <a href="tel:+31202410939">+31 202 410 939</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__social">
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://twitter.com">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a href="https://instagram.com">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+                <a href="https://youtube.com">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    <span class="sr-only">Youtube</span>
+                </a>
+            </div><!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="easilon-btn">
+                    <span class="easilon-btn__icon"><i class="icon-search"></i></span>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+    <script src="{% static 'assets/vendors/jquery/jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap-select/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ui/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/nouislider/nouislider.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/tiny-slider/tiny-slider.js' %}"></script>
+    <script src="{% static 'assets/vendors/wnumb/wNumb.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/slick/slick.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/wow/wow.js' %}"></script>
+    <script src="{% static 'assets/vendors/imagesloaded/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/isotope/isotope.js' %}"></script>
+    <script src="{% static 'assets/vendors/countdown/countdown.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-circleType/jquery.circleType.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-lettering/jquery.lettering.min.js' %}"></script>
+    <!-- template js -->
+    <script src="{% static 'assets/js/easilon.js' %}"></script>
+</body>
+
+</html>

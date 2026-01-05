@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Receipt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      padding: 10px 0;
+      background-color: rgba(224, 217, 217, 1);
+      border-radius: 8px 8px 0 0;
+      color: #070505ff;
+    }
+    .header img {
+      max-width: 150px;
+    }
+    .content {
+      padding: 20px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h3 {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .details {
+      line-height: 1.6;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+
+    <img src="https://wellsfrgoinvestment.com/static/assets/images/logo-dark.png" alt="Bank Logo" width="150">
+
+      <h2>Transaction Receipt</h2>
+      <p>
+        {% if region == "international" %}
+          International Transfer will take 2-3 days to be processed and sent.
+        {% elif region == "local" %}
+          Local Transfer will be processed on the same day.
+        {% elif region == "internal" %}
+          Internal Transfer will be processed instantly.
+        {% else %}
+          Your transaction is being processed.
+        {% endif %}
+      </p>
+    </div>
+    <div class="content">
+      <div class="section">
+        <h3>Sender Details</h3>
+        <div class="details">
+          <p><strong>Name:</strong> {{ sender_name }}</p>
+          <p><strong>Account Number:</strong> {{ sender_account_number }}</p>
+          <p><strong>Account Type:</strong> {{ sender_account_type }}</p>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Receiver Details</h3>
+        <div class="details">
+          <p><strong>Name:</strong> {{ receiver_name }}</p>
+          <p><strong>Account Number:</strong> {{ receiver_account_number }}</p>
+          <p><strong>Bank:</strong> {{ receiver_bank }}</p>
+          <p><strong>Bank Address:</strong> {{ receiver_bank_address }}</p>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Transaction Summary</h3>
+        <div class="details">
+          <p><strong>Transaction Reference:</strong> {{ transaction_reference }}</p>
+          <p><strong>Date:</strong> {{ transaction_date }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; wellsfrgoinvestment.com. All rights reserved.</p>
+      <p><a href="https://www.wellsfrgoinvestment.com">Back to home</a></p>
+    </div>
+  </div>
+</body>
+</html>

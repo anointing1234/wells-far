@@ -1,0 +1,300 @@
+:root {
+  --easilon-text: #A0A0C0;
+  --easilon-text-rgb: 160, 160, 192;
+  --easilon-text2: #82828A;
+  --easilon-text2-rgb: 130, 130, 138;
+  --easilon-black: #FFFFFF;
+  --easilon-black-rgb: 255, 255, 255;
+  --easilon-white: #2B2B5E;
+  --easilon-white-rgb: 43, 43, 94;
+}
+
+/*------------------------------------------------
+Background Style
+--------------------------------------------------*/
+.demo-one__card,
+.home-showcase .demo-one__btn::before,
+.home-showcase .demo-one__btn::after,
+.mobile-nav__content .main-menu__list li a button.expanded,
+.easilon-btn--white,
+.easilon-btn__icon::after,
+.search-popup__form input[type=search],
+.search-popup__form input[type=text],
+.main-slider-one__btn-1::before,
+.main-slider-one__btn-1::after,
+.loan-calculator-form,
+.loan-calculator-form .noUi-horizontal .noUi-handle,
+.about-one__experience .video-btn,
+.services-one__service__overlay::before,
+.services-one__service__overlay::after,
+.features-one__features__icon,
+.team-card__identity::before,
+.faq-one .sec-title__shape__one,
+.faq-one .sec-title__shape__two,
+.faq-one .faq-accordion .accordion,
+.faq-one .faq-accordion .accordion-title__icon::after,
+.faq-one .faq-accordion .accordion-title__icon::before,
+.faq-one .faq-accordion .active .accordion-title__icon::after,
+.download-app-one__btn,
+.blog-card__date__month,
+.quick-loan-one__inner,
+.footer-widget__newsletter input[type=text] {
+  background-color: var(--easilon-black);
+}
+
+.preloader,
+.mobile-nav__content,
+.topbar,
+.search-popup__form .easilon-btn::before,
+.search-popup__form .easilon-btn::after,
+.main-slider-one,
+.main-slider-one__item,
+.loan-calculator-form__btn::before,
+.loan-calculator-form__btn::after,
+.main-slider-one__carousel.owl-carousel .owl-nav button:hover,
+.about-one,
+.about-one__experience .video-btn:hover,
+.services-one,
+.features-one__features__item:hover .features-one__features__icon,
+.company-transparency-one,
+.company-transparency-one__bg,
+.faq-one .faq-accordion .accordion-title__icon,
+.testimonials-one__slider,
+.download-app-one,
+.quick-loan-one .easilon-btn::before,
+.quick-loan-one .easilon-btn::after,
+.main-footer,
+.footer-widget__newsletter button[type=submit]:hover::after {
+  background-color: var(--easilon-white);
+}
+
+.features-one__inner,
+.faq-one,
+.faq-one .faq-accordion .active .accordion-title__icon {
+  background-color: var(--easilon-base);
+}
+
+.features-one .sec-title__shape__one,
+.features-one .sec-title__shape__two {
+  background-color: var(--easilon-white2);
+}
+
+.download-app-one__shape {
+  background-color: rgba(var(--easilon-white2-rgb), 0.2);
+}
+
+.demo-one__btns,
+.blog-card__hover__box {
+  background-color: rgba(var(--easilon-white-rgb), 0.8);
+}
+
+.main-slider-one__bg::after {
+  background: linear-gradient(90deg, var(--easilon-white) 0%, rgba(var(--easilon-white-rgb), 0.6) 25.9%, rgba(var(--easilon-white-rgb), 0) 100%);
+}
+@media (max-width: 1199px) {
+  .main-slider-one__bg::after {
+    background: none;
+    background-color: rgba(var(--easilon-white-rgb), 0.8);
+  }
+}
+
+.company-transparency-one__bg::after {
+  background: linear-gradient(90deg, var(--easilon-white) 10.89%, rgba(var(--easilon-white-rgb), 0) 53.02%);
+}
+
+.easilon-btn:hover .easilon-btn__icon::after {
+  background-color: var(--easilon-base);
+}
+
+.easilon-btn--white::before,
+.easilon-btn--white::after {
+  background-color: var(--easilon-base);
+}
+
+.main-header__btn .easilon-btn__icon::after,
+.loan-calculator-form__btn .easilon-btn__icon::after {
+  background-color: rgba(var(--easilon-black-rgb), 0.25);
+}
+
+.easilon-btn--white:hover .easilon-btn__icon::after,
+.easilon-btn--border:hover .easilon-btn__icon::after {
+  background-color: var(--easilon-black);
+}
+
+.loan-calculator-form__btn:hover .easilon-btn__icon::after {
+  background-color: rgba(var(--easilon-black-rgb), 0.5);
+}
+
+.about-one__experience::before {
+  background-color: var(--easilon-text2);
+}
+
+.about-one__bg,
+.download-app-one__bg {
+  opacity: 1;
+}
+
+/*------------------------------------------------
+Color Style
+--------------------------------------------------*/
+.easilon-btn,
+.mobile-nav__content .main-menu__list li > a,
+.mobile-nav__content .main-menu__list li a button,
+.mobile-nav__contact li,
+.mobile-nav__contact__icon,
+.mobile-nav__social a,
+.mobile-nav__close,
+.main-menu .main-menu__list li ul li.current > a,
+.main-menu .main-menu__list li ul li:hover > a,
+.main-menu .main-menu__list li ul li > a::after,
+.main-slider-one__sub-title,
+.main-slider-one__title,
+.main-slider-one__carousel.owl-carousel .owl-nav button,
+.about-one__experience__year,
+.about-one__experience__title,
+.about-one__experience .video-btn:hover,
+.services-one__slide__text--two,
+.services-one__main-tab-box .tab-buttons .tab-btn:hover .tab-btn__inner,
+.services-one__main-tab-box .tab-buttons .tab-btn.active-btn .tab-btn__inner,
+.services-one__main-tab-box .tab-buttons .tab-btn__icon,
+.services-one__main-tab-box .tab-buttons .tab-btn:hover .tab-btn__inner .tab-btn__icon,
+.services-one__main-tab-box .tab-buttons .tab-btn.active-btn .tab-btn__inner .tab-btn__icon,
+.features-one__text,
+.features-one__features__item:hover .features-one__features__icon,
+.company-transparency-one .sec-title__title,
+.company-transparency-one__main-tab-box .tab-buttons .tab-btn,
+.company-transparency-one__main-tab-box .tab-buttons .tab-btn:hover,
+.company-transparency-one__main-tab-box .tab-buttons .tab-btn.active-btn,
+.company-transparency-one__call__title,
+.company-transparency-one__call__number,
+.company-transparency-one__call:hover .company-transparency-one__call__icon,
+.team-card__name,
+.team-card__designation,
+.team-card .social-links-two a .social-links-two__icon,
+.team-card .social-links-two a:hover .social-links-two__icon,
+.faq-one .sec-title__tagline,
+.testimonial-card__name,
+.testimonial-card__designation,
+.download-app-one__btn:hover .download-app-one__btn__title,
+.download-app-one__btn:hover .download-app-one__btn__text,
+.blog-card__date__day,
+.footer-widget__title,
+.social-links-two a:hover .social-links-two__icon {
+  color: var(--easilon-black);
+}
+
+.home-showcase .demo-one__title,
+.mobile-nav__content .main-menu__list li a button.expanded,
+.loan-calculator-form__title,
+.loan-calculator-form__content p,
+.services-one__slide__text--one,
+.services-one__main-tab-box .tab-buttons .tab-btn__inner::after,
+.faq-one .faq-accordion .accordion-title h4,
+.testimonials-one .funfact-one__item__title,
+.download-app-one__btn__title,
+.blog-card__meta li,
+.blog-card__meta li a:hover,
+.blog-card__title,
+.blog-card__date__month,
+.quick-loan-one__inner .sec-title__title,
+.footer-widget__newsletter button[type=submit]:hover {
+  color: var(--easilon-white);
+}
+
+.search-popup__form input[type=search],
+.search-popup__form input[type=text],
+.main-slider-one__carousel.owl-carousel .owl-dots .owl-dot span::after,
+.loan-calculator-form .input-box__top span,
+.loan-calculator-form .noUi-tooltip,
+.loan-calculator-form__content p b,
+.faq-one .faq-accordion .accordion-content p,
+.download-app-one__btn__text,
+.footer-widget__newsletter input[type=text] {
+  color: var(--easilon-text2);
+}
+
+.about-one__list__item,
+.features-one .sec-title__tagline,
+.features-one .sec-title__title,
+.features-one__features__text {
+  color: var(--easilon-white2);
+}
+
+.download-app-one__list li {
+  color: var(--easilon-text);
+}
+
+@media (max-width: 1199px) {
+  .main-slider-one__carousel.owl-carousel .owl-dots .owl-dot span::after {
+    color: var(--easilon-text);
+  }
+}
+.home-showcase .demo-one__title:hover,
+.easilon-btn:hover,
+.easilon-btn--border,
+.easilon-btn--white,
+.main-slider-one__carousel.owl-carousel .owl-nav button:hover,
+.features-one__features__icon,
+.work-process-one__item:hover .work-process-one__item__number {
+  color: var(--easilon-base);
+}
+
+.easilon-btn--white:hover,
+.easilon-btn--border:hover,
+.loan-calculator-form__btn:hover {
+  color: var(--easilon-black);
+}
+
+.services-one__slide__text--one {
+  text-shadow: 1px 1px 0 var(--easilon-black), -1px -1px 0 var(--easilon-black), 1px -1px 0 var(--easilon-black), -1px 1px 0 var(--easilon-black), 1px 1px 0 var(--easilon-black);
+}
+
+/*------------------------------------------------
+Border Style
+--------------------------------------------------*/
+.topbar {
+  border-bottom: 1px solid rgba(var(--easilon-border-color-rgb), 0.2);
+}
+
+.mobile-nav__content .main-menu__list li:not(:last-child) {
+  border-color: rgba(var(--easilon-black-rgb), 0.1);
+}
+
+.main-slider-one__carousel.owl-carousel .owl-nav button:hover {
+  border-color: var(--easilon-white);
+}
+
+.about-one__image__with-border,
+.team-card .social-links-two a {
+  border-color: var(--easilon-black);
+}
+
+.about-one__experience .video-btn > span {
+  border-color: rgba(var(--easilon-black-rgb), 0.25);
+}
+
+.about-one__experience .video-btn:hover > span {
+  border-color: rgba(var(--easilon-white-rgb), 0.25);
+}
+
+.features-one__features__item:not(:last-child) {
+  border-color: rgba(var(--easilon-border-color-rgb), 0.25);
+}
+
+/*------------------------------------------------
+SVG Style
+--------------------------------------------------*/
+.work-process-one__item__circle path {
+  fill: rgba(var(--easilon-white2-rgb), 0.2);
+}
+
+.team-card__shape__one,
+.team-card__shape__two {
+  stroke: var(--easilon-black);
+}
+
+.testimonial-card__icon path:nth-child(1),
+.testimonial-card__icon path:nth-child(2) {
+  fill: var(--easilon-black);
+}
+/*# sourceMappingURL=easilon-dark.css.map */

@@ -1,0 +1,706 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+ <!-- SEO Optimized Title & Description -->
+    <title>Wells Fargo Investment Bank | Global Investment & Financial Services</title>
+    <meta name="description" content="Wells Fargo Investment Bank delivers world-class investment banking, capital markets, advisory, and financial solutions. We support corporations, institutions, and governments with trusted expertise, strategic insight, and long-term financial value." />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Wells Fargo Investment Bank | Investment & Financial Solutions" />
+    <meta property="og:description" content="Comprehensive investment banking, advisory, and capital markets services backed by trusted financial expertise." />
+    <meta property="og:image" content="{% static 'assets/images/your-og-image.jpg' %}" />
+    <meta property="og:type" content="website" />
+
+
+    <!-- Favicons -->
+   <link rel="icon" href="{% static "assets/images/favicons/favicon.ico" %}" />
+
+   
+  <!-- ✅ CSS: Wowdash Assets -->
+  <link rel="stylesheet" href="{% static 'asset/css/remixicon.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/apexcharts.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/dataTables.min.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/editor-katex.min.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/editor.atom-one-dark.min.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/editor.quill.snow.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/flatpickr.min.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/full-calendar.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/jquery-jvectormap-2.0.5.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/prism.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/file-upload.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/audioplayer.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- ✅ Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BankOrCreditUnion",
+    "name": "nibc",
+    "url": "https://www.nibc-nl.com/",
+    "logo": "https://www.nibc-nl.com{% static 'images/logo.png' %}",
+    "description": "nibc offers checking, savings, loans, and secure online banking services.",
+    "sameAs": [
+      "https://www.facebook.com/nibc",
+      "https://twitter.com/nibc",
+      "https://www.linkedin.com/company/nibc"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-123-4567",
+      "contactType": "customer service",
+      "areaServed": "US",
+      "availableLanguage": ["English", "Spanish"]
+    }
+  }
+  </script>
+</head>
+
+
+<style>
+@media (max-width: 576px) {
+  .quick-action-link .w-50-px {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .quick-action-link iconify-icon {
+    font-size: 16px !important;
+  }
+
+  .quick-action-link span {
+    font-size: 11px !important;
+  }
+}
+</style>
+
+<body>
+ <aside class="sidebar">
+  <button type="button" class="sidebar-close-btn">
+    <iconify-icon icon="lucide:x"></iconify-icon>
+  </button>
+  <div>
+    <a href="{% url 'dashboard' %}" class="sidebar-logo">
+      <img src="{% static 'assets/images/logo-dark.png' %}" alt="site logo" class="light-logo">
+      <img src="{% static 'assets/images/logo-dark.png' %}" alt="site logo" class="dark-logo">
+      <img src="{% static 'assets/images/logo-dark.png' %}" alt="site logo" class="logo-icon">
+    </a>
+  </div>
+  <div class="sidebar-menu-area">
+    <ul class="sidebar-menu" id="sidebar-menu">
+      <li>
+        <a href="{% url 'dashboard' %}">
+          <iconify-icon icon="lucide:home" class="menu-icon"></iconify-icon>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-group-title">Transactions</li>
+      <li>
+        <a href="{% url 'local_transfer' %}">
+          <iconify-icon icon="lucide:send" class="menu-icon"></iconify-icon>
+          <span>Local Transfer</span>
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'international_transfer' %}">
+          <iconify-icon icon="lucide:globe" class="menu-icon"></iconify-icon>
+          <span>International Transfer</span> 
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'deposit' %}">
+          <iconify-icon icon="lucide:plus-circle" class="menu-icon"></iconify-icon>
+          <span>Deposit</span> 
+        </a>
+      </li>
+
+      {% comment %} <li class="sidebar-menu-group-title">Services</li> 
+      <li >
+        <a href="{% url 'loans' %}">
+          <iconify-icon icon="lucide:file-text" class="menu-icon"></iconify-icon>
+          <span>Loans</span> 
+        </a>
+      </li>
+      <li >
+        <a href="{% url 'grants' %}">
+          <iconify-icon icon="lucide:award" class="menu-icon"></iconify-icon>
+          <span>Grants</span> 
+        </a>
+      </li> {% endcomment %}
+      <li class="sidebar-menu-group-title">Settings</li>
+      <li >
+        <a href="mailto:info@wellsfrgoinvestment.com">
+          <iconify-icon icon="lucide:life-buoy" class="menu-icon"></iconify-icon>
+          <span>Support</span> 
+        </a>
+      </li>     
+      <li >
+        <a href="{% url 'profile' %}">
+          <iconify-icon icon="lucide:settings" class="menu-icon"></iconify-icon>
+          <span>Settings</span> 
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+<main class="dashboard-main">
+<div class="navbar-header">
+  <div class="row align-items-center justify-content-between">
+    <div class="col-auto">
+      <div class="d-flex flex-wrap align-items-center gap-4">
+        <button type="button" class="sidebar-toggle">
+          <iconify-icon icon="heroicons:bars-3-solid" class="icon text-2xl non-active"></iconify-icon>
+          <iconify-icon icon="iconoir:arrow-right" class="icon text-2xl active"></iconify-icon>
+        </button>
+        <button type="button" class="sidebar-mobile-toggle">
+          <iconify-icon icon="heroicons:bars-3-solid" class="icon"></iconify-icon>
+        </button>
+        
+      </div>
+    </div>
+
+    <div class="col-auto">
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <button type="button" data-theme-toggle class="w-40-px h-40-px bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center"></button>
+     
+
+        <div >
+          <button class="d-flex justify-content-center align-items-center rounded-circle" type="button" data-bs-toggle="dropdown">
+               {% if request.user.profile_pic %}
+                  <img src="{{ request.user.profile_pic.url }}" alt="image" class="w-40-px h-40-px object-fit-cover rounded-circle">
+                {% else %}
+                  <img src="{% static 'asset/images/user-grid/user-grid-img13.png' %}" alt="image" class="w-40-px h-40-px object-fit-cover rounded-circle">
+                {% endif %}
+            </button>
+                    <div class="dropdown-menu to-top dropdown-menu-sm">
+            <div class="py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2">
+              <div>
+                <h6 class="text-lg text-primary-light fw-semibold mb-2">{{ request.user.username }}</h6>
+              </div>
+              <button type="button" class="hover-text-danger">
+                <iconify-icon icon="radix-icons:cross-1" class="icon text-xl"></iconify-icon> 
+              </button>
+            </div>
+            <ul class="to-top-list">
+              <li>
+                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="{% url 'profile' %}"> 
+                <iconify-icon icon="solar:user-linear" class="icon text-xl"></iconify-icon>  My Profile</a>
+              </li>
+          
+              <li>
+                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3" href="{% url 'logout' %}"> 
+                <iconify-icon icon="lucide:power" class="icon text-xl"></iconify-icon>  Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div><!-- Profile dropdown end -->
+      </div>
+    </div>
+  </div>
+</div> 
+  
+  <div class="dashboard-main-body">
+    
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24">
+  <h6 class="fw-semibold mb-0">Dashboard</h6>
+</div>
+
+<div class="row row-cols-xxxl-5 row-cols-lg-3 row-cols-sm-2 row-cols-1 gy-3">
+  <div class="col">
+    <div class="card shadow-none border bg-gradient-start-2 h-100">
+      <div class="card-body p-15">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <div>
+            <p class="fw-medium text-primary-light mb-1" style="font-size:14px;">Available Balance</p>
+            <h6 class="mb-0 d-flex align-items-center gap-2" style="font-size:16px;">
+              <span id="available-balance-savings" 
+                    data-balance=" €{{ request.user.account_balance.checking_balance|intcomma }}">
+                 €{{ request.user.account_balance.available_balance|intcomma }}
+              </span>
+              <i class="fa-solid fa-eye fa-sm toggle-balance-icon" 
+                 data-target="available-balance-savings" 
+                 data-key="balanceHidden-savings" 
+                 style="cursor:pointer;"></i>
+            </h6>
+            <p class="text-gray mt-2" style="font-size:12px;">*****{{ request.user.account_number|slice:"-3:" }}</p>
+          </div>
+          <div class="w-40-px h-40-px bg-purple rounded-circle d-flex justify-content-center align-items-center">
+            <iconify-icon icon="lucide:wallet" class="text-white text-xl mb-0"></iconify-icon>
+          </div>
+        </div>
+       <div class="row mt-2">
+          <div class="col-4 text-start">
+            <p style="font-size:10px;" class="card-category text-gray">Credits <span> €{{ request.user.account_balance.total_credits|intcomma }}</span></p>
+          </div>
+          <div class="col-4 text-start">
+            <p style="font-size:10px;" class="card-category text-gray">Debits <span> €{{ request.user.account_balance.total_debits|intcomma }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- card end -->
+  </div>
+  <div class="col">
+    <div class="card shadow-none border bg-gradient-start-1 h-100">
+      <div class="card-body p-15">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <div>
+            <p class="fw-medium text-primary-light mb-1" style="font-size:14px;">Checking Account</p>
+            <h6 class="mb-0 d-flex align-items-center gap-2" style="font-size:16px;">
+              <span id="available-balance-checking" 
+                    data-balance=" €{{ request.user.account_balance.checking_balance|intcomma }}">
+                 €{{ request.user.account_balance.checking_balance|intcomma }}
+              </span>
+              <i class="fa-solid fa-eye fa-sm toggle-balance-icon" 
+                 data-target="available-balance-checking" 
+                 data-key="balanceHidden-checking" 
+                 style="cursor:pointer;"></i>
+            </h6>
+            <p class="text-gray mt-2" style="font-size:12px;">*****{{ request.user.account_number|slice:"-3:" }}</p>
+          </div>
+          <div class="w-40-px h-40-px bg-cyan rounded-circle d-flex justify-content-center align-items-center">
+            <iconify-icon icon="lucide:credit-card" class="text-white text-xl mb-0"></iconify-icon>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-4 text-start">
+            <p style="font-size:10px;" class="card-category text-gray">Credits <span> €{{ request.user.account_balance.total_credits|intcomma }}</span></p>
+          </div>
+          <div class="col-4 text-start">
+            <p style="font-size:10px;" class="card-category text-gray">Debits <span> €{{ request.user.account_balance.total_debits|intcomma }}</span></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- card end -->
+  </div>
+  <div class="col">
+    <div class="card shadow-none border bg-gradient-start-3 h-100">
+      <div class="card-body p-15">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <div>
+            <p class="fw-medium text-primary-light mb-1" style="font-size:14px;">Loan Balance</p>
+            <h6 class="mb-0 d-flex align-items-center gap-2" style="font-size:16px;">
+              <span id="available-balance-loan" 
+                    data-balance=" €{{ request.user.account_balance.loan_balance|intcomma }}">
+                 €{{ request.user.account_balance.loan_balance|intcomma }}
+              </span>
+              <i class="fa-solid fa-eye fa-sm toggle-balance-icon" 
+                 data-target="available-balance-loan" 
+                 data-key="balanceHidden-loan" 
+                 style="cursor:pointer;"></i>
+            </h6>
+            <p class="text-gray mt-2" style="font-size:12px;">*****{{ request.user.account_number|slice:"-3:" }}</p>
+         
+           
+          </div>
+          <div class="w-40-px h-40-px bg-info rounded-circle d-flex justify-content-center align-items-center">
+            <iconify-icon icon="lucide:file-text" class="text-white text-xl mb-0"></iconify-icon>
+          </div>
+        </div>
+{% if loan %}
+  <div class="row mt-3">
+      <div class="col-4 text-start">
+          <p style="font-size:10px;" class="card-category text-gray">
+              Payments <span> €{{ loan.amount|intcomma }}</span>
+          </p>
+      </div>
+      <div class="col-4 text-start">
+          <p style="font-size:10px;" class="card-category text-gray">
+              Due Date <span>{{ loan.repayment_start_date|date:"M d, Y" }}</span>
+          </p>
+      </div>
+  </div>
+{% else %}
+  <p>No active loans.</p>
+{% endif %}
+
+      </div>
+    </div><!-- card end -->
+  </div>
+  <div class="col">
+    <div class="card shadow-none border bg-gradient-start-4 h-100">
+      <div class="card-body p-15">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <div>
+            <p class="fw-medium text-primary-light mb-1" style="font-size:14px;">GBP Account</p>
+            <h6 class="mb-0 d-flex align-items-center gap-2" style="font-size:16px;">
+              <span id="available-balance-gbp" 
+                    data-balance="£{{ request.user.account_balance.gbp|intcomma }}">
+                £{{ request.user.account_balance.gbp|intcomma }}
+              </span>
+              <i class="fa-solid fa-eye fa-sm toggle-balance-icon" 
+                 data-target="available-balance-gbp" 
+                 data-key="balanceHidden-gbp" 
+                 style="cursor:pointer;"></i>
+            </h6>
+            <p class="text-gray mt-2" style="font-size:12px;">*****{{ request.user.account_number|slice:"-3:" }}</p>
+          </div>
+          <div class="w-40-px h-40-px bg-success-main rounded-circle d-flex justify-content-center align-items-center">
+            <iconify-icon icon="lucide:pound-sterling" class="text-white text-xl mb-0"></iconify-icon>
+          </div>
+        </div>
+        
+      </div>
+    </div><!-- card end -->
+  </div>
+  <div class="col">
+    <div class="card shadow-none border bg-gradient-start-5 h-100">
+      <div class="card-body p-15">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <div>
+            <p class="fw-medium text-primary-light mb-1" style="font-size:14px;">EUR Account</p>
+            <h6 class="mb-0 d-flex align-items-center gap-2" style="font-size:16px;">
+              <span id="available-balance-eur" 
+                    data-balance="€{{ request.user.account_balance.eur|intcomma }}">
+                €{{ request.user.account_balance.eur|intcomma }}
+              </span>
+              <i class="fa-solid fa-eye fa-sm toggle-balance-icon" 
+                 data-target="available-balance-eur" 
+                 data-key="balanceHidden-eur" 
+                 style="cursor:pointer;"></i>
+            </h6>
+            <p class="text-gray mt-2" style="font-size:12px;">*****{{ request.user.account_number|slice:"-3:" }}</p>
+          </div>
+          <div class="w-40-px h-40-px bg-red rounded-circle d-flex justify-content-center align-items-center">
+            <iconify-icon icon="lucide:euro" class="text-white text-xl mb-0"></iconify-icon>
+          </div>
+        </div>
+        
+      </div>
+    </div><!-- card end -->
+  </div>
+</div>
+
+
+
+<!-- Quick Actions Section -->
+<div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-5 mb-24">
+  <h6 class="fw-semibold mb-0">Quick Actions</h6>
+</div>
+
+<div class="row row-cols-xxxl-4 row-cols-lg-4 row-cols-sm-2  gy-3">
+
+  <div class="col">
+    <a href="{% url 'local_transfer' %}" 
+       class="d-flex flex-column align-items-center justify-content-center text-center text-decoration-none quick-action-link">
+      <div class="w-50-px h-50-px bg-primary rounded-circle d-flex justify-content-center align-items-center mb-2 shadow-sm">
+        <iconify-icon icon="lucide:arrow-right-left" class="text-white text-xl"></iconify-icon>
+      </div>
+      <span class="fw-medium text-primary-light" style="font-size:14px;">Local Transfer</span>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="{% url 'international_transfer' %}" 
+       class="d-flex flex-column align-items-center justify-content-center text-center text-decoration-none quick-action-link">
+      <div class="w-50-px h-50-px bg-cyan rounded-circle d-flex justify-content-center align-items-center mb-2 shadow-sm">
+        <iconify-icon icon="lucide:globe" class="text-white text-xl"></iconify-icon>
+      </div>
+      <span class="fw-medium text-primary-light" style="font-size:14px;">International Transfer</span>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="{% url 'deposit' %}" 
+       class="d-flex flex-column align-items-center justify-content-center text-center text-decoration-none quick-action-link">
+      <div class="w-50-px h-50-px bg-success-main rounded-circle d-flex justify-content-center align-items-center mb-2 shadow-sm">
+        <iconify-icon icon="lucide:download" class="text-white text-xl"></iconify-icon>
+      </div>
+      <span class="fw-medium text-primary-light" style="font-size:14px;">Deposit</span>
+    </a>
+  </div>
+
+  <div class="col">
+    <a href="{% url 'bank_statement' %}" 
+       class="d-flex flex-column align-items-center justify-content-center text-center text-decoration-none quick-action-link">
+      <div class="w-50-px h-50-px bg-warning rounded-circle d-flex justify-content-center align-items-center mb-2 shadow-sm">
+        <iconify-icon icon="lucide:book-open" class="text-white text-xl"></iconify-icon>
+      </div>
+      <span class="fw-medium text-primary-light" style="font-size:14px;">Bank Statements</span>
+    </a>
+  </div>
+
+</div>
+
+
+    <div class="row gy-4 mt-1">
+   <div class="col-xxl-6 col-xl-12">
+  <div class="card h-100 shadow-sm border rounded-3">
+    <div class="card-body py-5">
+      <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+        <h6 class="text-lg fw-semibold mb-0">Total Transactions This Month</h6>
+      </div>
+
+      <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+        <h6 class="mb-0 fw-bold" style="font-size: 18px;">
+           €{{ total_amount|intcomma }}
+        </h6>
+
+        <span class="text-sm fw-semibold rounded-pill bg-success-focus text-success-main border border-success px-3 py-1 d-flex align-items-center gap-1">
+          +10% <iconify-icon icon="bxs:up-arrow" class="text-xs"></iconify-icon>
+        </span>
+
+        <span class="text-xs fw-medium text-gray">
+          +  €{{ per_day_avg|intcomma }} Per Day
+        </span>
+      </div>
+
+      <div id="chart" class="pt-3">
+        <script>
+          var options = {
+            series: [{
+              name: 'Transactions',
+              data: {{ chart_data|safe }}
+            }],
+            chart: {
+              type: 'line',
+              height: 250,
+              toolbar: { show: false }
+            },
+            colors: ['#10b981'],
+            stroke: {
+              curve: 'smooth',
+              width: 3
+            },
+            xaxis: {
+              categories: {{ chart_labels|safe }},
+              labels: {
+                style: { colors: '#6c757d', fontSize: '12px' }
+              },
+              axisBorder: { show: false },
+              axisTicks: { show: false }
+            },
+            yaxis: {
+              labels: {
+                style: { colors: '#6c757d', fontSize: '12px' }
+              }
+            },
+            fill: {
+              type: 'gradient',
+              gradient: {
+                shadeIntensity: 1,
+                opacityFrom: 0.4,
+                opacityTo: 0,
+                stops: [0, 90]
+              }
+            },
+            tooltip: {
+              theme: 'light',
+              style: { fontSize: '12px' }
+            },
+            grid: {
+              borderColor: '#e9ecef'
+            }
+          };
+          var chart = new ApexCharts(document.querySelector("#chart"), options);
+          chart.render();
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+<div class="col-xxl-9 col-xl-12">
+  <div class="card h-100">
+    <div class="card-body p-24">
+      <div class="d-flex flex-wrap align-items-center gap-1 justify-content-between mb-16">
+        <h6 class="fw-semibold mb-0">Recent Transactions</h6>
+      </div>
+
+      <!-- Enable scroll only when more than 3 records -->
+      <div class="table-responsive scroll-sm{% if transactions|length > 3 %} scrollable-table{% endif %}">
+        <table class="table bordered-table sm-table mb-0">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Type</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Description</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for tx in transactions %}
+            <tr>
+              <td>{{ tx.transaction_date|date:"M d, Y H:i" }}</td>
+              <td>{{ tx.get_transaction_type_display }}</td>
+              <td> €{{ tx.amount }}</td>
+              <td>{{ tx.description|default:"—" }}</td>
+              <td class="text-center">
+                {% if tx.status == "completed" %}
+                  <span class="bg-success-focus text-success-main px-16 py-4 rounded-pill fw-medium text-sm">Completed</span>
+                {% elif tx.status == "pending" %}
+                  <span class="bg-warning-focus text-warning-main px-16 py-4 rounded-pill fw-medium text-sm">Pending</span>
+                {% else %}
+                  <span class="bg-danger-focus text-danger-main px-16 py-4 rounded-pill fw-medium text-sm">Failed</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td colspan="5" class="text-center text-muted">No recent transactions found.</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Scrollable container for transactions */
+.table-responsive.scroll-sm {
+  max-height: 250px; /* controls vertical scroll area */
+  overflow-y: auto;  /* enables vertical scroll */
+  overflow-x: auto;  /* keeps horizontal scroll if needed */
+}
+
+/* Ensure table width is responsive */
+.table-responsive.scroll-sm table {
+  width: 100%;
+  min-width: 600px; /* prevents columns from collapsing too much */
+  border-collapse: collapse;
+}
+
+/* Sticky table header when scrolling vertically */
+.table-responsive.scroll-sm thead th {
+  position: sticky;
+  top: 0;
+  background: #fff; /* adjust to match your theme */
+  z-index: 2;
+}
+
+/* Column width & nowrap for better readability */
+.table.bordered-table th,
+.table.bordered-table td {
+  min-width: 120px;
+  white-space: nowrap;
+}
+</style>
+
+   
+
+    </div>
+  </div>
+
+  <footer class="d-footer">
+  <div class="row align-items-center justify-content-between">
+    <div class="col-auto">
+      <p class="mb-0">Copyright &copy; <script>document.write(new Date().getFullYear());</script> 
+        All Rights Reserved | Wells fargo</p>
+    </div>
+ 
+  </div>
+</footer>
+</main>
+  
+  <!-- jQuery library js -->
+  <script src="{% static 'asset/js/lib/jquery-3.7.1.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'asset/js/lib/bootstrap.bundle.min.js' %}"></script>
+  <!-- Apex Chart js -->
+  <script src="{% static 'asset/js/lib/apexcharts.min.js' %}"></script>
+  <!-- Data Table js -->
+  <script src="{% static 'asset/js/lib/dataTables.min.js' %}"></script>
+  <!-- Iconify Font js -->
+  <script src="{% static 'asset/js/lib/iconify-icon.min.js' %}"></script>
+  <!-- jQuery UI js -->
+  <script src="{% static 'asset/js/lib/jquery-ui.min.js' %}"></script>
+  <!-- Vector Map js -->
+  <script src="{% static 'asset/js/lib/jquery-jvectormap-2.0.5.min.js' %}"></script>
+  <script src="{% static 'asset/js/lib/jquery-jvectormap-world-mill-en.js' %}"></script>
+  <!-- Popup js -->
+  <script src="{% static 'asset/js/lib/magnifc-popup.min.js' %}"></script>
+  <!-- Slick Slider js -->
+  <script src="{% static 'asset/js/lib/slick.min.js' %}"></script>
+  <!-- prism js -->
+  <script src="{% static 'asset/js/lib/prism.js' %}"></script>
+  <!-- file upload js -->
+  <script src="{% static 'asset/js/lib/file-upload.js' %}"></script>
+  <!-- audioplayer -->
+  <script src="{% static 'asset/js/lib/audioplayer.js' %}"></script>
+  
+  <!-- main js -->
+  <script src="{% static 'asset/js/app.js' %}"></script>
+
+<script src="{% static 'asset/js/homeOneChart.js' %}"></script>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select all toggle icons
+    const toggleIcons = document.querySelectorAll(".toggle-balance-icon");
+  
+    // Function to update the balance element UI
+    function updateUI(element, isHidden) {
+      // Retrieve the original balance text from data attribute.
+      const originalBalance = element.getAttribute("data-balance");
+      if (isHidden) {
+        element.textContent = "*******";
+      } else {
+        element.textContent = originalBalance;
+      }
+      element.setAttribute("data-hidden", isHidden ? "true" : "false");
+    }
+  
+    // Process each toggle icon independently
+    toggleIcons.forEach(function(icon) {
+      // Get the target balance element's id and the storage key from the icon's data attributes.
+      const targetId = icon.getAttribute("data-target");
+      const storageKey = icon.getAttribute("data-key");
+      const balanceElement = document.getElementById(targetId);
+  
+      // On page load, check localStorage for this balance's saved state.
+      let storedState = localStorage.getItem(storageKey);
+      let isHidden = storedState === "true";  // stored as string "true" or "false"
+      if (balanceElement) {
+        updateUI(balanceElement, isHidden);
+      }
+  
+      // Set the initial icon classes accordingly.
+      if (isHidden) {
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      } else {
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+  
+      // Add a click event listener for toggling.
+      icon.addEventListener("click", function() {
+        // Toggle the state for this balance element.
+        const currentlyHidden = balanceElement.getAttribute("data-hidden") === "true";
+        const newHidden = !currentlyHidden;
+        updateUI(balanceElement, newHidden);
+        
+        // Update the icon classes.
+        if (newHidden) {
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+        } else {
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+        }
+        
+        // Save the new state to localStorage for this balance.
+        localStorage.setItem(storageKey, newHidden);
+      });
+    });
+  });
+  </script>
+  
+
+</body>
+</html>

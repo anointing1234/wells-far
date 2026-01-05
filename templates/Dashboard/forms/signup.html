@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO Optimized Title & Description -->
+    <title>Wells Fargo Investment Bank | Global Investment & Financial Services</title>
+    <meta name="description" content="Wells Fargo Investment Bank delivers world-class investment banking, capital markets, advisory, and financial solutions. We support corporations, institutions, and governments with trusted expertise, strategic insight, and long-term financial value." />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Wells Fargo Investment Bank | Investment & Financial Solutions" />
+    <meta property="og:description" content="Comprehensive investment banking, advisory, and capital markets services backed by trusted financial expertise." />
+    <meta property="og:image" content="{% static 'assets/images/your-og-image.jpg' %}" />
+    <meta property="og:type" content="website" />
+
+ <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/favicons/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/favicons/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicons/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static 'assets/images/favicons/site.webmanifest' %}" />
+
+  <!-- remix icon font css -->
+  <link rel="stylesheet" href="{% static 'asset/css/remixicon.css' %}">
+  <!-- BootStrap css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/bootstrap.min.css' %}">
+  <!-- Apex Chart css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/apexcharts.css' %}">
+  <!-- Data Table css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/dataTables.min.css' %}">
+  <!-- Text Editor css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/editor-katex.min.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/editor.atom-one-dark.min.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/editor.quill.snow.css' %}">
+  <!-- Date picker css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/flatpickr.min.css' %}">
+  <!-- Calendar css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/full-calendar.css' %}">
+  <!-- Vector Map css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/jquery-jvectormap-2.0.5.css' %}">
+  <!-- Popup css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/magnific-popup.css' %}">
+  <!-- Slick Slider css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/slick.css' %}">
+  <!-- prism css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/prism.css' %}">
+  <!-- file upload css -->
+  <link rel="stylesheet" href="{% static 'asset/css/lib/file-upload.css' %}">
+  <link rel="stylesheet" href="{% static 'asset/css/lib/audioplayer.css' %}">
+  <!-- main css -->
+  <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+</head>
+
+<body>
+<section class="auth bg-base d-flex flex-wrap">  
+    <div class="auth-left d-lg-block d-none">
+        <div class="d-flex align-items-center flex-column justify-content-center">
+            <img src="{% static 'asset/images/auth/auth-img.png' %}" alt="">
+        </div>
+    </div>
+    <div class="auth-right py-32 px-24 d-flex flex-column justify-content-center">
+        <div class="max-w-464-px mx-auto w-100">
+            <div>
+                <div class="d-flex justify-content-center">
+                <a href="{% url 'home' %}" class="mb-40 max-w-290-px">
+                    <img style="width:180px;" src="{% static 'assets/images/logo-dark.png' %}" alt="nibc Logo">
+                </a>
+               </div>
+                <h4 class="mb-12">Sign Up to Your Account</h4>
+                <p class="mb-32 text-secondary-light text-lg">Please provide your details to create an account</p>
+            </div>
+           <form action="{% url 'register_view' %}" method="POST">
+    {% csrf_token %}
+    
+    <!-- First Name -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="f7:person"></iconify-icon>
+        </span>
+        <input type="text" name="first_name" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="First Name" required>
+    </div>
+
+    <!-- Last Name -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="f7:person"></iconify-icon>
+        </span>
+        <input type="text" name="last_name" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="Last Name" required>
+    </div>
+
+    <!-- Email -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="mage:email"></iconify-icon>
+        </span>
+        <input type="email" name="email" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="Email" required>
+    </div>
+
+    <!-- Phone Number -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="mdi:phone"></iconify-icon>
+        </span>
+        <input type="tel" name="phone_number" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="Phone Number">
+    </div>
+
+    <!-- Country -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="mdi:map-marker"></iconify-icon>
+        </span>
+        <input type="text" name="country" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="Country">
+    </div>
+
+    <!-- City -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="mdi:city"></iconify-icon>
+        </span>
+        <input type="text" name="city" class="form-control h-56-px bg-neutral-50 radius-12" placeholder="City">
+    </div>
+
+    <!-- Gender -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="mdi:gender-male-female"></iconify-icon>
+        </span>
+        <select name="gender" class="form-control h-56-px bg-neutral-50 radius-12">
+            <option value="" disabled selected>Select Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+        </select>
+    </div>
+
+    <!-- Account Type -->
+    <div class="icon-field mb-16">
+        <span class="icon top-50 translate-middle-y">
+            <iconify-icon icon="mdi:bank"></iconify-icon>
+        </span>
+        <select name="account_type" class="form-control h-56-px bg-neutral-50 radius-12">
+            <option value="savings" selected>Savings</option>
+            <option value="current">Current</option>
+            <option value="fixed">Fixed Deposit</option>
+            <option value="offshore">Off Shore</option>
+        </select>
+    </div>
+
+    <!-- Terms & Conditions -->
+    <div class="form-check style-check d-flex align-items-start mb-32">
+        <input class="form-check-input border border-neutral-300 mt-4" type="checkbox" value="" id="condition" required>
+        <label class="form-check-label text-sm" for="condition">
+            By creating an account, you agree to the 
+            <a href="javascript:void(0)" class="text-primary-600 fw-semibold">Terms & Conditions</a> and our 
+            <a href="javascript:void(0)" class="text-primary-600 fw-semibold">Privacy Policy</a>
+        </label>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" id="submitBtn" class="btn btn-primary text-sm btn-sm px-12 py-16 w-100 radius-12">
+        Sign Up
+    </button>
+
+    <!-- Redirect to login -->
+    <div class="mt-32 text-center text-sm">
+        <p class="mb-0">Already have an account? <a href="{% url 'login' %}" class="text-primary-600 fw-semibold">Sign In</a></p>
+    </div>
+</form>
+
+        </div>
+    </div>
+</section>
+
+<!-- jQuery library js -->
+<script src="{% static 'asset/js/lib/jquery-3.7.1.min.js' %}"></script>
+<!-- Bootstrap js -->
+<script src="{% static 'asset/js/lib/bootstrap.bundle.min.js' %}"></script>
+<!-- Apex Chart js -->
+<script src="{% static 'asset/js/lib/apexcharts.min.js' %}"></script>
+<!-- Data Table js -->
+<script src="{% static 'asset/js/lib/dataTables.min.js' %}"></script>
+<!-- Iconify Font js -->
+<script src="{% static 'asset/js/lib/iconify-icon.min.js' %}"></script>
+<!-- jQuery UI js -->
+<script src="{% static 'asset/js/lib/jquery-ui.min.js' %}"></script>
+<!-- Vector Map js -->
+<script src="{% static 'asset/js/lib/jquery-jvectormap-2.0.5.min.js' %}"></script>
+<script src="{% static 'asset/js/lib/jquery-jvectormap-world-mill-en.js' %}"></script>
+<!-- Popup js -->
+<script src="{% static 'asset/js/lib/magnifc-popup.min.js' %}"></script>
+<!-- Slick Slider js -->
+<script src="{% static 'asset/js/lib/slick.min.js' %}"></script>
+<!-- prism js -->
+<script src="{% static 'asset/js/lib/prism.js' %}"></script>
+<!-- file upload js -->
+<script src="{% static 'asset/js/lib/file-upload.js' %}"></script>
+<!-- audioplayer -->
+<script src="{% static 'asset/js/lib/audioplayer.js' %}"></script>
+<!-- main js -->
+<script src="{% static 'asset/js/app.js' %}"></script>
+
+<!-- Toastify CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<!-- Toastify JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+<style>
+.btn-spinner {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+</style>
+
+
+<script>
+    // ================== Input Show Hide Js Start ==========
+    function initializeInputToggle(toggleSelector) {
+        $(toggleSelector).on('click', function() {
+            $(this).toggleClass("ri-eye-off-line");
+            var input = $($(this).attr("data-toggle"));
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+    }
+    // Call the function
+    initializeInputToggle('.toggle-password');
+    // ========================= Input Show Hide Js End ===========================
+</script>
+
+<script>
+$(document).ready(function() {
+    $("form").on("submit", function(e) {
+        e.preventDefault(); 
+
+        let form = $(this);
+        let url = form.attr("action");
+        let formData = form.serialize();
+        let btn = $("#submitBtn");
+
+        // Disable button & show spinner
+        btn.prop("disabled", true).html('<span class="btn-spinner"></span>');
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            success: function(response) {
+                if (response.success) {
+                    Toastify({
+                        text: response.message,
+                        duration: 4000,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#28a745",
+                        close: true,
+                        stopOnFocus: true
+                    }).showToast();
+
+                    if (response.redirect_url) {
+                        setTimeout(function() {
+                            window.location.href = response.redirect_url;
+                        }, 2000);
+                    }
+                } else {
+                    Toastify({
+                        text: response.message.replace(/\n/g, " "),
+                        duration: 5000,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#dc3545",
+                        close: true,
+                        stopOnFocus: true
+                    }).showToast();
+                }
+            },
+            error: function() {
+                Toastify({
+                    text: "Something went wrong. Please try again.",
+                    duration: 5000,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#dc3545",
+                    close: true,
+                    stopOnFocus: true
+                }).showToast();
+            },
+            complete: function() {
+                // Reset button after request finishes
+                btn.prop("disabled", false).text("Sign Up");
+            }
+        });
+    });
+});
+</script>
+
+
+
+</body>
+</html>
