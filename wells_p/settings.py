@@ -40,7 +40,6 @@ AUTH_USER_MODEL = 'accounts.Account'
 
 LOGIN_URL = '/Accounts/login/'
 
-# Application definition
 
 INSTALLED_APPS = [
     "unfold",
